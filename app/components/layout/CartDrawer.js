@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Icon from "../Icon";
 
 function CartDrawer() {
   return (
@@ -7,7 +8,7 @@ function CartDrawer() {
         <h5 className="fw-bold m-0">1 Item</h5>
         <form action="/cart/clear" method="post" className="ms-auto">
           <button className="ico text-secondary small" type="submit">
-            🗑 Clear All
+            <Icon name="trash" size={14} /> Clear All
           </button>
         </form>
         <button className="btn-close ms-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -16,7 +17,7 @@ function CartDrawer() {
         <div className="flex-grow-1">
           <div className="ci">
             <a className="th" href="product.html">
-              🏷️
+              <Icon name="tag" size={24} />
             </a>
             <div className="flex-grow-1">
               <div className="fw-semibold small">
@@ -38,7 +39,7 @@ function CartDrawer() {
               <form action="/cart/remove" method="post">
                 <input type="hidden" name="product_id" value="26" />
                 <button className="ico" type="submit" aria-label="Remove">
-                  🗑
+                  <Icon name="trash" size={18} />
                 </button>
               </form>
               <div className="fw-semibold">৳ 574.00</div>

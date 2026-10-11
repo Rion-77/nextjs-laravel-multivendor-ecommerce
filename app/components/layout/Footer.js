@@ -1,3 +1,5 @@
+import Icon from "../Icon";
+
 function Footer() {
   return (
     <footer>
@@ -5,7 +7,7 @@ function Footer() {
         <div className="row g-4">
           <div className="col-lg-4">
             <div className="logo mb-2">
-              <b>✚</b>CareKart
+              <b><Icon name="medical-cross" /></b>CareKart
             </div>
             <p>
               Online pharmacy &amp; healthcare platform. Medicines, supplements and care products delivered to your
@@ -13,7 +15,7 @@ function Footer() {
             </p>
             <div className="d-flex gap-2 flex-wrap mb-3">
               <a className="sb" href="#">
-                🍎
+                <Icon name="apple" size={20} />
                 <span>
                   Download on the<b>App Store</b>
                 </span>
@@ -93,7 +95,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="copy">© 2026 CareKart Healthcare Limited. All rights reserved. | Made with ❤️ in Bangladesh</div>
+      <div className="copy">© 2026 CareKart Healthcare Limited. All rights reserved. | Made with <Icon name="heart" size={14} /> in Bangladesh</div>
     </footer>
   );
 }

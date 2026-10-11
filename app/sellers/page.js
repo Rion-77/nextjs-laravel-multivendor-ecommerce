@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Icon from "../components/Icon";
 
 function SellersPage() {
   return (
@@ -32,10 +33,10 @@ function SellersPage() {
               <h2 className="h6 fw-bold mb-1">
                 <Link href="/sellers/1">MediCare Pharmacy</Link>
               </h2>
-              <div className="small text-secondary">📍 Dhaka · ⭐ 4.8</div>
+              <div className="small text-secondary"><Icon name="map-pin" size={14} /> Dhaka · <Icon name="star" size={14} /> 4.8</div>
               <div className="seller-meta">
-                <span className="chip-s">🏪 24 shops</span>
-                <span className="chip-s">📦 7 products</span>
+                <span className="chip-s"><Icon name="store" size={14} /> 24 shops</span>
+                <span className="chip-s"><Icon name="package" size={14} /> 7 products</span>
               </div>
             </div>
             <Link className="btn btn-m btn-sm px-3" href="/sellers/1">
@@ -52,10 +53,10 @@ function SellersPage() {
               <h2 className="h6 fw-bold mb-1">
                 <a href="seller-healthplus-drugstore.html">HealthPlus Drugstore</a>
               </h2>
-              <div className="small text-secondary">📍 Chattogram · ⭐ 4.7</div>
+              <div className="small text-secondary"><Icon name="map-pin" size={14} /> Chattogram · <Icon name="star" size={14} /> 4.7</div>
               <div className="seller-meta">
-                <span className="chip-s">🏪 18 shops</span>
-                <span className="chip-s">📦 6 products</span>
+                <span className="chip-s"><Icon name="store" size={14} /> 18 shops</span>
+                <span className="chip-s"><Icon name="package" size={14} /> 6 products</span>
               </div>
             </div>
             <a className="btn btn-m btn-sm px-3" href="seller-healthplus-drugstore.html">
@@ -72,10 +73,10 @@ function SellersPage() {
               <h2 className="h6 fw-bold mb-1">
                 <a href="seller-lazz-wellness.html">Lazz Wellness</a>
               </h2>
-              <div className="small text-secondary">📍 Sylhet · ⭐ 4.6</div>
+              <div className="small text-secondary"><Icon name="map-pin" size={14} /> Sylhet · <Icon name="star" size={14} /> 4.6</div>
               <div className="seller-meta">
-                <span className="chip-s">🏪 12 shops</span>
-                <span className="chip-s">📦 6 products</span>
+                <span className="chip-s"><Icon name="store" size={14} /> 12 shops</span>
+                <span className="chip-s"><Icon name="package" size={14} /> 6 products</span>
               </div>
             </div>
             <a className="btn btn-m btn-sm px-3" href="seller-lazz-wellness.html">
@@ -92,10 +93,10 @@ function SellersPage() {
               <h2 className="h6 fw-bold mb-1">
                 <a href="seller-babybloom-store.html">BabyBloom Store</a>
               </h2>
-              <div className="small text-secondary">📍 Dhaka · ⭐ 4.9</div>
+              <div className="small text-secondary"><Icon name="map-pin" size={14} /> Dhaka · <Icon name="star" size={14} /> 4.9</div>
               <div className="seller-meta">
-                <span className="chip-s">🏪 9 shops</span>
-                <span className="chip-s">📦 6 products</span>
+                <span className="chip-s"><Icon name="store" size={14} /> 9 shops</span>
+                <span className="chip-s"><Icon name="package" size={14} /> 6 products</span>
               </div>
             </div>
             <a className="btn btn-m btn-sm px-3" href="seller-babybloom-store.html">
@@ -112,10 +113,10 @@ function SellersPage() {
               <h2 className="h6 fw-bold mb-1">
                 <a href="seller-technokit-devices.html">Technokit Devices</a>
               </h2>
-              <div className="small text-secondary">📍 Dhaka · ⭐ 4.5</div>
+              <div className="small text-secondary"><Icon name="map-pin" size={14} /> Dhaka · <Icon name="star" size={14} /> 4.5</div>
               <div className="seller-meta">
-                <span className="chip-s">🏪 7 shops</span>
-                <span className="chip-s">📦 6 products</span>
+                <span className="chip-s"><Icon name="store" size={14} /> 7 shops</span>
+                <span className="chip-s"><Icon name="package" size={14} /> 6 products</span>
               </div>
             </div>
             <a className="btn btn-m btn-sm px-3" href="seller-technokit-devices.html">
@@ -132,10 +133,10 @@ function SellersPage() {
               <h2 className="h6 fw-bold mb-1">
                 <a href="seller-skinglow-beauty.html">SkinGlow Beauty</a>
               </h2>
-              <div className="small text-secondary">📍 Bogura · ⭐ 4.7</div>
+              <div className="small text-secondary"><Icon name="map-pin" size={14} /> Bogura · <Icon name="star" size={14} /> 4.7</div>
               <div className="seller-meta">
-                <span className="chip-s">🏪 15 shops</span>
-                <span className="chip-s">📦 12 products</span>
+                <span className="chip-s"><Icon name="store" size={14} /> 15 shops</span>
+                <span className="chip-s"><Icon name="package" size={14} /> 12 products</span>
               </div>
             </div>
             <a className="btn btn-m btn-sm px-3" href="seller-skinglow-beauty.html">

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Icon from "./components/Icon";
 
 function NotFound() {
   return (
@@ -6,7 +7,7 @@ function NotFound() {
       <section class="nf">
         <div class="nf-code" aria-hidden="true">
           <span>4</span>
-          <span class="nf-pill">💊</span>
+          <span class="nf-pill"><Icon name="capsule" size={40} /></span>
           <span>4</span>
         </div>
         <h1 class="h3 fw-bold">Oops! Page not found</h1>

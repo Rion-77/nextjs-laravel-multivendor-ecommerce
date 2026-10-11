@@ -1,3 +1,5 @@
+import Icon from "../../components/Icon";
+
 function SellerSinglePage() {
   return (
     <main className="container-xxl shell">
@@ -13,9 +15,9 @@ function SellerSinglePage() {
           <div className="flex-grow-1">
             <h1 className="h4 fw-bold mb-1">
               Technokit Devices
-              <span className="chip-s ok-s">✔ Verified seller</span>
+              <span className="chip-s ok-s"><Icon name="check" size={14} /> Verified seller</span>
             </h1>
-            <div className="small text-secondary">📍 Dhaka · ⭐ 4.5 rating</div>
+            <div className="small text-secondary"><Icon name="map-pin" size={14} /> Dhaka · <Icon name="star" size={14} /> 4.5 rating</div>
           </div>
           <div className="s-stats">
             <div>
@@ -44,10 +46,10 @@ function SellerSinglePage() {
           <div className="box">
             <h2 className="h6 fw-bold">Shop locations</h2>
             <ul className="s-list">
-              <li>📍 Dhanmondi</li>
-              <li>📍 Gulshan</li>
-              <li>📍 Mirpur</li>
-              <li>📍 Uttara</li>
+              <li><Icon name="map-pin" size={14} /> Dhanmondi</li>
+              <li><Icon name="map-pin" size={14} /> Gulshan</li>
+              <li><Icon name="map-pin" size={14} /> Mirpur</li>
+              <li><Icon name="map-pin" size={14} /> Uttara</li>
             </ul>
             <div className="small text-secondary">+ 3 more shops</div>
           </div>
@@ -61,7 +63,7 @@ function SellerSinglePage() {
             <article className="pc">
               <span className="od">28% Off</span>
               <a href="product.html">
-                <div className="im">🌡️</div>
+                <div className="im"><Icon name="thermometer" size={48} /></div>
                 <h3>Thermometer Digital</h3>
               </a>
               <div className="mt">Technokit Healthcare Ltd</div>
@@ -79,7 +81,7 @@ function SellerSinglePage() {
             <article className="pc">
               <span className="od">15% Off</span>
               <a href="product.html">
-                <div className="im">🌡️</div>
+                <div className="im"><Icon name="thermometer" size={48} /></div>
                 <h3>Pulse Oximeter (Jumper)</h3>
               </a>
               <div className="mt">Technokit Healthcare Ltd</div>
@@ -97,7 +99,7 @@ function SellerSinglePage() {
             <article className="pc">
               <span className="od">20% Off</span>
               <a href="product.html">
-                <div className="im">🌡️</div>
+                <div className="im"><Icon name="thermometer" size={48} /></div>
                 <h3>BP Machine Digital (Jumper)</h3>
               </a>
               <div className="mt">Technokit Healthcare Ltd</div>
@@ -115,7 +117,7 @@ function SellerSinglePage() {
             <article className="pc">
               <span className="od">18% Off</span>
               <a href="product.html">
-                <div className="im">🌡️</div>
+                <div className="im"><Icon name="thermometer" size={48} /></div>
                 <h3>Electric Hot Water Bag</h3>
               </a>
               <div className="mt">Technokit Healthcare Ltd</div>
@@ -133,7 +135,7 @@ function SellerSinglePage() {
             <article className="pc">
               <span className="od">20% Off</span>
               <a href="product.html">
-                <div className="im">🌡️</div>
+                <div className="im"><Icon name="thermometer" size={48} /></div>
                 <h3>Getwell Thermometer</h3>
               </a>
               <div className="mt">Getwell</div>
@@ -151,7 +153,7 @@ function SellerSinglePage() {
             <article className="pc">
               <span className="od">10% Off</span>
               <a href="product.html">
-                <div className="im">🌡️</div>
+                <div className="im"><Icon name="thermometer" size={48} /></div>
                 <h3>Blood Lancets (GetWell)</h3>
               </a>
               <div className="mt">Getwell</div>

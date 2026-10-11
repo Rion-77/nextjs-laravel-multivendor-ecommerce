@@ -1,3 +1,5 @@
+import Icon from "../components/Icon";
+
 function CheckoutPage() {
   return (
     <div className="container-xxl shell co">
@@ -101,7 +103,7 @@ function CheckoutPage() {
               </div>
               <label className="pay">
                 <input type="radio" name="pay" value="cod" checked />
-                <span className="e">💵</span>
+                <span className="e"><Icon name="money" /></span>
                 <span>
                   <b>Cash on delivery</b>
                   <small>Pay when your order arrives</small>
@@ -109,7 +111,7 @@ function CheckoutPage() {
               </label>
               <label className="pay">
                 <input type="radio" name="pay" value="bkash" />
-                <span className="e">📱</span>
+                <span className="e"><Icon name="phone" /></span>
                 <span>
                   <b>bKash</b>
                   <small>Pay with mobile banking</small>
@@ -117,7 +119,7 @@ function CheckoutPage() {
               </label>
               <label className="pay">
                 <input type="radio" name="pay" value="card" />
-                <span className="e">💳</span>
+                <span className="e"><Icon name="credit-card" /></span>
                 <span>
                   <b>Credit / debit card</b>
                   <small>Secure, SSL-encrypted payment</small>
@@ -132,7 +134,7 @@ function CheckoutPage() {
               <i>3</i>Order summary
             </div>
             <div className="sum-item">
-              <div className="th">🏷️</div>
+              <div className="th"><Icon name="tag" size={24} /></div>
               <div className="flex-grow-1">
                 <div className="small fw-semibold">Freyias Sunscreen SPF PA 50 ++ For Oily Skin 50ml</div>
                 <div className="small text-secondary">50ml × 2</div>

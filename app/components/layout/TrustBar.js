@@ -1,3 +1,5 @@
+import Icon from "../Icon";
+
 function TrustBar() {
   return (
     <section className="trust">
@@ -5,7 +7,7 @@ function TrustBar() {
         <div className="row g-2">
           <div className="col-6 col-lg-3">
             <div className="tc">
-              <i>🛡️</i>
+              <i><Icon name="shield" /></i>
               <span>
                 <b>Authentic products</b>Sourced from manufacturers, authorised distributors and importers.
               </span>
@@ -13,7 +15,7 @@ function TrustBar() {
           </div>
           <div className="col-6 col-lg-3">
             <div className="tc">
-              <i>💚</i>
+              <i><Icon name="heart" /></i>
               <span>
                 <b>Pharmacist-verified</b>Every prescription order is checked before dispatch.
               </span>
@@ -21,7 +23,7 @@ function TrustBar() {
           </div>
           <div className="col-6 col-lg-3">
             <div className="tc">
-              <i>🚚</i>
+              <i><Icon name="truck" /></i>
               <span>
                 <b>Fast home delivery</b>Same-day in major cities; 2-3 days nationwide.
               </span>
@@ -29,7 +31,7 @@ function TrustBar() {
           </div>
           <div className="col-6 col-lg-3">
             <div className="tc">
-              <i>🎧</i>
+              <i><Icon name="headset" /></i>
               <span>
                 <b>24/7 customer support</b>Phone, WhatsApp, Messenger and email.
               </span>
