@@ -1,27 +1,40 @@
 import Link from "next/link";
 import Icon from "../../components/Icon";
 
+async function getSingleProduct(id) {
+  "use cache";
+
+  const res = await fetch(
+    `http://multivendor-ecommerce.test/api/frontend/products/${id}`,
+  );
+
+  return res.json();
+}
+
 async function SingleProducts({ params }) {
   const { id } = await params;
 
-  const res = await fetch(`http://multivendor-ecommerce.test/api/frontend/products/1`);
-
-  const data = await res.json();
+  const data = await getSingleProduct(id);
 
   const product = data.product;
-  console.log(product);
+  // console.log(product);
 
   return (
     <div className="flex-grow-1 main-col">
       <div className="crumb">
-        <Link href="/"> Home </Link> › {product.category.name} ›<b> {product.name} </b>
+        <Link href="/"> Home </Link> › {product.category.name} ›
+        <b> {product.name} </b>
       </div>
       <div className="row g-3">
         <div className="col-lg-8">
           <div className="gal">
             <img
               className="product-image"
-              src={product.media.length > 0 ? product.media[0].original_url : "https://placehold.co/600x400"}
+              src={
+                product.media.length > 0
+                  ? product.media[0].original_url
+                  : "https://placehold.co/600x400"
+              }
               alt={product.name}
             />
           </div>
@@ -29,10 +42,15 @@ async function SingleProducts({ params }) {
         <div className="col-lg-4">
           <div className="box">
             <h1 className="h5 fw-bold mb-1">{product.name}</h1>
-            <div className="small text-secondary mb-3">{product.category.name}</div>
+            <div className="small text-secondary mb-3">
+              {product.category.name}
+            </div>
             <div className="small">
               By&nbsp;
-              <a className="fw-semibold text-decoration-underline" href="index.html">
+              <a
+                className="fw-semibold text-decoration-underline"
+                href="index.html"
+              >
                 {product.vendor.shop_name}
               </a>
             </div>
@@ -42,7 +60,12 @@ async function SingleProducts({ params }) {
             <div className="mrp">
               <s>MRP ৳{product.offer_price}</s>
               <span className="off">
-                {(((product.base_price - product.offer_price) / product.base_price) * 100).toFixed(2)}% Off
+                {(
+                  ((product.base_price - product.offer_price) /
+                    product.base_price) *
+                  100
+                ).toFixed(2)}
+                % Off
               </span>
             </div>
             <div className="best mt-1">
@@ -51,7 +74,13 @@ async function SingleProducts({ params }) {
             {/* <select className="sel my-3" name="pack" aria-label="Pack size">
               <option>1x50ml</option>
             </select> */}
-            <input className="qt-in mb-3" type="number" name="qty" min="1" aria-label="Quantity" />
+            <input
+              className="qt-in mb-3"
+              type="number"
+              name="qty"
+              min="1"
+              aria-label="Quantity"
+            />
             <button className="btn btn-m w-100 py-2" type="submit">
               Add to cart
             </button>
@@ -72,7 +101,9 @@ async function SingleProducts({ params }) {
       {/* Related Products */}
       <div className="box">
         <div className="d-flex justify-content-between align-items-center mb-3">
-          <h2 className="h6 fw-bold m-0"><Icon name="clipboard" size={18} /> Alternatives</h2>
+          <h2 className="h6 fw-bold m-0">
+            <Icon name="clipboard" size={18} /> Alternatives
+          </h2>
           <a className="fw-semibold link-m small" href="index.html">
             View All
           </a>
@@ -81,7 +112,9 @@ async function SingleProducts({ params }) {
           <article className="pc">
             <span className="od">23% Off</span>
             <a href="product.html">
-              <div className="im"><Icon name="bottle" size={48} /></div>
+              <div className="im">
+                <Icon name="bottle" size={48} />
+              </div>
               <h3>SkinO Daily Gel Moisturizer 70ml</h3>
             </a>
             <div className="mt">SkinO</div>
@@ -99,7 +132,9 @@ async function SingleProducts({ params }) {
           <article className="pc">
             <span className="od">25% Off</span>
             <a href="product.html">
-              <div className="im"><Icon name="bottle" size={48} /></div>
+              <div className="im">
+                <Icon name="bottle" size={48} />
+              </div>
               <h3>SkinO Gel Cleanser 100ml</h3>
             </a>
             <div className="mt">SkinO</div>
@@ -117,7 +152,9 @@ async function SingleProducts({ params }) {
           <article className="pc">
             <span className="od">5% Off</span>
             <a href="product.html">
-              <div className="im"><Icon name="bottle" size={48} /></div>
+              <div className="im">
+                <Icon name="bottle" size={48} />
+              </div>
               <h3>Sunmask</h3>
             </a>
             <div className="mt">Square Pharmaceuticals PLC.</div>
@@ -135,7 +172,9 @@ async function SingleProducts({ params }) {
           <article className="pc">
             <span className="od">45% Off</span>
             <a href="product.html">
-              <div className="im"><Icon name="bottle" size={48} /></div>
+              <div className="im">
+                <Icon name="bottle" size={48} />
+              </div>
               <h3>Laikou Matcha Mud Mask</h3>
             </a>
             <div className="mt">Laikou</div>
@@ -153,7 +192,9 @@ async function SingleProducts({ params }) {
           <article className="pc">
             <span className="od">50% Off</span>
             <a href="product.html">
-              <div className="im"><Icon name="bottle" size={48} /></div>
+              <div className="im">
+                <Icon name="bottle" size={48} />
+              </div>
               <h3>SkinO Tea Tree Shower Gel</h3>
             </a>
             <div className="mt">SkinO</div>
@@ -171,7 +212,9 @@ async function SingleProducts({ params }) {
           <article className="pc">
             <span className="od">5% Off</span>
             <a href="product.html">
-              <div className="im"><Icon name="bottle" size={48} /></div>
+              <div className="im">
+                <Icon name="bottle" size={48} />
+              </div>
               <h3>Mederma Advance Scar Gel</h3>
             </a>
             <div className="mt">Mundipharma</div>
@@ -191,7 +234,9 @@ async function SingleProducts({ params }) {
 
       {/* Descrption */}
       <div className="box ov">
-        <h2 className="h6 fw-bold m-0"><Icon name="clipboard" size={18} /> Product overview</h2>
+        <h2 className="h6 fw-bold m-0">
+          <Icon name="clipboard" size={18} /> Product overview
+        </h2>
         <h4>Description</h4>
 
         <p>{product.description}</p>
@@ -199,9 +244,12 @@ async function SingleProducts({ params }) {
         <h4>Frequently Asked Questions</h4>
         <div className="faq">
           <p>
-            <b>Q: Is Freyias Sunscreen SPF PA 50 ++ For Oily Skin 50ml genuine?</b>
+            <b>
+              Q: Is Freyias Sunscreen SPF PA 50 ++ For Oily Skin 50ml genuine?
+            </b>
             <br />
-            A: Yes. Products are sourced from licensed distributors and checked before dispatch.
+            A: Yes. Products are sourced from licensed distributors and checked
+            before dispatch.
           </p>
           <p>
             <b>Q: How fast is delivery?</b>
@@ -211,9 +259,10 @@ async function SingleProducts({ params }) {
         </div>
       </div>
       <div className="disc">
-        <b>Disclaimer</b>The information provided is accurate to the best of our knowledge, but packaging, ingredients
-        and specifications may change without notice. Check the pack before use and consult a professional for any
-        concerns.
+        <b>Disclaimer</b>The information provided is accurate to the best of our
+        knowledge, but packaging, ingredients and specifications may change
+        without notice. Check the pack before use and consult a professional for
+        any concerns.
       </div>
     </div>
   );

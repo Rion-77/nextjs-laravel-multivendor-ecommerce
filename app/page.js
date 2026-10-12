@@ -104,14 +104,14 @@ export default async function Home() {
                     )}
                     % Off
                   </span>
-                  <Link href="/products/1">
+                  <Link href={`/products/${product.id}`}>
                     <div className="im">
                       <img
                         className="product-image"
                         src={
                           product.media.length > 0
                             ? product.media[0].original_url
-                            : "https://placehold.co/600x400"
+                              : "https://placehold.co/600x400"
                         }
                         alt={product.name}
                       />

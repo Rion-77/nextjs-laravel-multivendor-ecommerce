@@ -17,7 +17,7 @@ async function Sidebar() {
     <aside className="sidew d-none d-lg-block">
       <nav className="side" aria-label="Categories">
         {categories.map((category) => (
-          <Link className="category-link" key={category.id} href="index.html">
+          <Link href={`/${category.slug}`} className="category-link" key={category.id}  >
             <span className="categoy-icon">
               <Icon name="capsule" />
             </span>
