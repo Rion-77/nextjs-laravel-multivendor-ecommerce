@@ -51,7 +51,7 @@ async function SingleProducts({ params }) {
             {/* <select className="sel my-3" name="pack" aria-label="Pack size">
               <option>1x50ml</option>
             </select> */}
-            <input className="qt-in mb-3" type="number" name="qty" value="1" min="1" aria-label="Quantity" />
+            <input className="qt-in mb-3" type="number" name="qty" min="1" aria-label="Quantity" />
             <button className="btn btn-m w-100 py-2" type="submit">
               Add to cart
             </button>

@@ -1,35 +1,56 @@
 // components/Carousel.tsx
 "use client";
+import { useState, useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 
 export default function Carousel({ children }) {
-  //   carousel initialization and options
   const [emblaRef, emblaApi] = useEmblaCarousel({
-    align: "start",
-    loop: false,
-    dragFree: true, // free scrolling instead of snapping to slides
-    containScroll: "trimSnaps", // no empty space at the ends
-    slidesToScroll: 1, // or "auto" to scroll a full viewport at a time
+    align: () => 24, // active slide starts PEEK px from the left edge
+    containScroll: "trimSnaps",
+    slidesToScroll: 1,
+    dragFree: false,
     breakpoints: {
-      "(min-width: 768px)": { slidesToScroll: 2 },
-      "(min-width: 1200px)": { slidesToScroll: "auto" },
+      "(min-width: 768px)": { align: () => 40 },
     },
-    startIndex: 0,
-    axis: "x",
-    direction: "ltr",
-    skipSnaps: false,
-    duration: 25,
   });
 
-  
+  const [canPrev, setCanPrev] = useState(false);
+  const [canNext, setCanNext] = useState(false);
+
+  const onSelect = useCallback((api) => {
+    setCanPrev(api.canScrollPrev());
+    setCanNext(api.canScrollNext());
+  }, []);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect(emblaApi);
+    emblaApi.on("select", onSelect).on("reInit", onSelect).on("settle", onSelect);
+    return () => {
+      emblaApi.off("select", onSelect).off("reInit", onSelect).off("settle", onSelect);
+    };
+  }, [emblaApi, onSelect]);
 
   return (
-    <>
+    <div className="position-relative">
       <div className="wrap-x overflow-hidden" ref={emblaRef}>
-        <div className="product-grid flex-nowrap">{children}</div>
-        <button onClick={() => emblaApi?.scrollPrev()}>Prev</button>
-        <button onClick={() => emblaApi?.scrollNext()}>Next</button>
+        <div className="product-grid d-flex flex-nowrap">{children}</div>
       </div>
-    </>
+
+      <button
+        className={`carousel-btn carousel-btn-left ${!canPrev ? "is-hidden" : ""}`}
+        onClick={() => emblaApi?.scrollPrev()}
+        aria-label="Previous"
+      >
+        <i className="bi bi-chevron-left"></i>
+      </button>
+      <button
+        className={`carousel-btn carousel-btn-right ${!canNext ? "is-hidden" : ""}`}
+        onClick={() => emblaApi?.scrollNext()}
+        aria-label="Next"
+      >
+        <i className="bi bi-chevron-right"></i>
+      </button>
+    </div>
   );
 }

@@ -225,7 +225,7 @@ a {
   overflow: auto;
   scrollbar-width: thin;
 }
-.side a {
+.side .category-link {
   display: flex;
   align-items: center;
   gap: 0.8rem;
@@ -235,15 +235,15 @@ a {
   font-size: 0.88rem;
   line-height: 1.25;
 }
-.side a:hover {
+.side .category-link:hover {
   background: #fff;
 }
-.side a em {
+.side .category-link em {
   margin-left: auto;
   font-style: normal;
   color: var(--muted);
 }
-.side a span,
+.side .category-link .categoy-icon,
 .cat span {
   display: grid;
   place-items: center;
@@ -548,22 +548,29 @@ a {
 }
 /* product card */
 .product-grid {
-  --product-grid-columns: 2;
+  --product-grid-columns: 1;
   --product-grid-gap: 0.75rem;
+  --product-grid-peek: 24px; /* same value as PEEK in Carousel.tsx */
   display: flex;
   flex-wrap: nowrap;
   gap: var(--product-grid-gap);
 }
+
 .product-grid > .pc {
   flex: 0 0
     calc(
-      (100% - (var(--product-grid-columns) - 1) * var(--product-grid-gap)) /
-        var(--product-grid-columns)
+      (
+        100% - (var(--product-grid-peek) * 2) -
+          ((var(--product-grid-columns) - 1) * var(--product-grid-gap))
+      ) / var(--product-grid-columns)
     );
+  min-width: 0;
 }
 @media (min-width: 768px) {
   .product-grid {
+    --product-grid-columns: 3;
     --product-grid-gap: 1.25rem;
+    --product-grid-peek: 40px;
   }
 }
 @media (min-width: 1024px) {
@@ -1449,3 +1456,102 @@ footer a:hover {
     padding-top: 0;
   }
 }
+
+/* ===== Carousel Buttons  ===== */
+.carousel-btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  transform: translateY(-50%);
+
+  /* Sizing & Typography */
+  width: 28px;  
+  height: 28px; 
+  font-size: 16px;
+  font-weight: 900;
+
+  /* Borders & Colors */
+  border-radius: 9999px;
+  border: none;
+  background-color: #ffffff; 
+  color: #6b7280; /* text-gray-500 */
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12); /* shadow-[...] */
+  outline: 2px solid transparent; /* focus:outline-none placeholder */
+  outline-offset: 2px;
+  
+  /* Ring (Simulated using a box-shadow layer or inset border) */
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 4px 14px rgba(0, 0, 0, 0.12); /* ring-1 ring-black/5 combined with shadow */
+
+  /* Interaction & Animation */
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* transition duration-300 */
+}
+.carousel-btn-left {
+ left: 10px;
+}
+
+.carousel-btn-right {
+ right: 10px;
+}
+
+/* Hover States */
+.carousel-btn:hover {
+  background-color: #02b290; /* hover:bg-brand */
+  color: #ffffff; /* hover:text-white */
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 6px 18px rgba(0, 0, 0, 0.18); /* hover:shadow-[...] */
+}
+
+/* Focus States */
+.carousel-btn:focus {
+  outline: none; /* focus:outline-none */
+}
+
+/* Responsive Breakpoints (Tailwind Defaults) */
+
+/* Medium Devices (md: >= 768px) */
+@media (min-width: 768px) {
+  .carousel-btn {
+    width: 32px;  /* md:w-8 */
+    height: 32px; /* md:h-8 */
+  }
+}
+
+/* Large Devices (lg: >= 1024px) */
+@media (min-width: 1024px) {
+  .carousel-btn {
+    width: 36px;  /* lg:w-9 */
+    height: 36px; /* lg:h-9 */
+    font-size: 18px; /* lg:text-lg */
+  }
+}
+
+/* Extra Large Devices (xl: >= 1280px) */
+@media (min-width: 1280px) {
+  .carousel-btn {
+    width: 40px;  /* xl:w-10 */
+    height: 40px; /* xl:h-10 */
+    font-size: 20px; /* xl:text-xl */
+  }
+}
+
+/* 3X Large Devices (3xl: >= 1920px) */
+@media (min-width: 1920px) {
+  .carousel-btn {
+    font-size: 24px; /* 3xl:text-2xl */
+  }
+}
+
+
+
+.carousel-btn {
+  transition: opacity 0.2s ease;
+}
+.carousel-btn.is-hidden {
+  opacity: 0;
+  visibility: hidden;      /* keeps layout space, removes from tab order */
+  pointer-events: none;
+}
+
+

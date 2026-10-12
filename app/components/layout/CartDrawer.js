@@ -3,7 +3,7 @@ import Icon from "../Icon";
 
 function CartDrawer() {
   return (
-    <div className="offcanvas offcanvas-end" id="cart" tabindex="-1" aria-label="Cart">
+    <div className="offcanvas offcanvas-end" id="cart" tabIndex="-1" aria-label="Cart">
       <div className="offcanvas-header border-bottom">
         <h5 className="fw-bold m-0">1 Item</h5>
         <form action="/cart/clear" method="post" className="ms-auto">
@@ -29,7 +29,7 @@ function CartDrawer() {
                 <select className="sel" name="pack" aria-label="Pack size">
                   <option>1x50ml</option>
                 </select>
-                <input className="qty-in" type="number" name="qty" value="2" min="1" aria-label="Quantity" />
+                <input className="qty-in" type="number" name="qty" min="1" aria-label="Quantity" />
                 <button className="btn btn-outline-secondary btn-sm" type="submit">
                   Update
                 </button>

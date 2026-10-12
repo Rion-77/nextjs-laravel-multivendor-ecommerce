@@ -223,6 +223,17 @@ const paths = {
       <path d="M4 21a8 8 0 0 1 16 0" />
     </>
   ),
+  chevronLeft: (
+    <>
+      <path
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="48"
+        d="M328 112 184 256l144 144"
+      ></path>
+    </>
+  ),
 };
 
 function Icon({ name, size = 20, className = "icon" }) {

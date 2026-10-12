@@ -1,63 +1,29 @@
+import Link from "next/link";
 import Icon from "../Icon";
 
-function Sidebar() {
+async function getAllCategories() {
+  "use cache";
+  const res = await fetch("http://multivendor-ecommerce.test/api/frontend/categories");
+
+  return res.json();
+}
+
+async function Sidebar() {
+  const data = await getAllCategories();
+  const categories = data.categories;
+
+  console.log(categories);
   return (
     <aside className="sidew d-none d-lg-block">
       <nav className="side" aria-label="Categories">
-        <a href="index.html">
-          <span><Icon name="capsule" /></span>OTC Medicine<em>›</em>
-        </a>
-        <a href="index.html">
-          <span><Icon name="flower" /></span>Feminine Care<em>›</em>
-        </a>
-        <a href="index.html">
-          <span><Icon name="leaf" /></span>Herbal & Traditional Medicine<em>›</em>
-        </a>
-        <a href="index.html">
-          <span><Icon name="bottle" /></span>Skin Care<em>›</em>
-        </a>
-        <a href="index.html">
-          <span><Icon name="scissors" /></span>Hair Care<em>›</em>
-        </a>
-        <a href="index.html">
-          <span><Icon name="baby" /></span>Baby Care<em>›</em>
-        </a>
-        <a href="index.html">
-          <span><Icon name="droplet" /></span>Diabetes Care<em>›</em>
-        </a>
-        <a href="index.html">
-          <span><Icon name="citrus" /></span>Vitamins & Supplements<em>›</em>
-        </a>
-        <a href="index.html">
-          <span><Icon name="tooth" /></span>Oral Care<em>›</em>
-        </a>
-        <a href="index.html">
-          <span><Icon name="bowl" /></span>Food & Nutrition<em>›</em>
-        </a>
-        <a href="index.html">
-          <span><Icon name="thermometer" /></span>Health Devices<em>›</em>
-        </a>
-        <a href="index.html">
-          <span><Icon name="tag" /></span>Exclusive Deals<em>›</em>
-        </a>
-        <a href="index.html">
-          <span><Icon name="soap" /></span>Personal Care<em>›</em>
-        </a>
-        <a href="index.html">
-          <span><Icon name="medical-cross" /></span>Pain & Cold Relief<em>›</em>
-        </a>
-        <a href="index.html">
-          <span><Icon name="bandage" /></span>First Aid & Wound Care<em>›</em>
-        </a>
-        <a href="index.html">
-          <span><Icon name="lipstick" /></span>Makeup & Cosmetics<em>›</em>
-        </a>
-        <a href="index.html">
-          <span><Icon name="home" /></span>Home Care<em>›</em>
-        </a>
-        <a href="index.html">
-          <span><Icon name="file" /></span>Prescription Medicine<em>›</em>
-        </a>
+        {categories.map((category) => (
+          <Link className="category-link" key={category.id} href="index.html">
+            <span className="categoy-icon">
+              <Icon name="capsule" />
+            </span>
+            {category.name}<em>›</em>
+          </Link>
+        ))}
       </nav>
     </aside>
   );
