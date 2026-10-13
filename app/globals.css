@@ -1,7 +1,7 @@
 /* CareKart pharmacy template – custom styles (on top of Bootstrap 5.3.3) */
 
 :root {
-  --hd: #25A8D6;
+  --hd: #25a8d6;
   --btn: #30a9da;
   --btn-d: #1f93c2;
   --link: #1b7fb0;
@@ -52,6 +52,10 @@ a {
 .btn-m:focus-visible {
   background: var(--btn-d);
   color: #fff;
+}
+
+.box-shadow-primary {
+  box-shadow: 0px 0px 6px #4f5f781a;
 }
 /* header */
 .hd {
@@ -306,7 +310,7 @@ a {
 }
 .slide-wrapper {
   height: clamp(220px, 25vw, 340px);
-  
+
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -335,7 +339,7 @@ a {
   opacity: 0.3;
 }
 .h1 {
-  background: linear-gradient(120deg, #25A8D6, #4cc9a0);
+  background: linear-gradient(120deg, #25a8d6, #4cc9a0);
 }
 .h2 {
   background: linear-gradient(120deg, #e8590c, #ffa94d);
@@ -365,7 +369,9 @@ a {
   background-color: #81858d;
   opacity: 0.9;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
-  transition: width 0.2s ease, background-color 0.2s ease;
+  transition:
+    width 0.2s ease,
+    background-color 0.2s ease;
 }
 .carousel-indicators .active {
   width: 28px;
@@ -540,7 +546,7 @@ a {
 .vid {
   aspect-ratio: 16/9;
   border-radius: 14px;
-  background: linear-gradient(135deg, #25A8D6, #4cc9a0);
+  background: linear-gradient(135deg, #25a8d6, #4cc9a0);
   display: grid;
   place-items: center;
   color: #fff;
@@ -559,10 +565,8 @@ a {
 .product-grid > .pc {
   flex: 0 0
     calc(
-      (
-        100% - (var(--product-grid-peek) * 2) -
-          ((var(--product-grid-columns) - 1) * var(--product-grid-gap))
-      ) / var(--product-grid-columns)
+      (100% - (var(--product-grid-peek) * 2) - ((var(--product-grid-columns) - 1) * var(--product-grid-gap))) /
+        var(--product-grid-columns)
     );
   min-width: 0;
 }
@@ -687,20 +691,36 @@ a {
   color: var(--ink);
   font-weight: 600;
 }
+
+/* ===== Single Product Page  ===== */
+
+.gal .product-image {
+  width: 100%;
+  height: auto;
+}
+
 .gal {
   aspect-ratio: 4/3;
   display: grid;
   place-items: center;
   font-size: clamp(7rem, 20vw, 11rem);
-  background: linear-gradient(160deg, #fafdff, #e9f3f8);
+  /* background: linear-gradient(160deg, #fafdff, #e9f3f8); */
   border-radius: 16px;
+  padding: 1.5rem;
 }
+
+.gal .product-image {
+  width: 100%;
+  height: auto;
+}
+
 .box {
   border: 1px solid var(--line);
   border-radius: 16px;
   padding: 1rem 1.1rem;
   background: #fff;
   margin-bottom: 0.8rem;
+  box-shadow: 0px 0px 6px #4f5f781a;
 }
 .mrp {
   font-size: 0.8rem;
@@ -767,6 +787,57 @@ a {
 .qt.s span {
   width: 34px;
   flex: none;
+}
+.qty-stepper {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+.qty-btn {
+  flex: none;
+  width: 62px;
+  height: 58px;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1;
+  cursor: pointer;
+}
+.qty-btn:first-child {
+  border-right: 1px solid var(--line);
+}
+.qty-btn:last-child {
+  border-left: 1px solid var(--line);
+}
+.qty-btn:hover,
+.qty-btn:focus-visible {
+  background: var(--gray);
+}
+.qty-input {
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  text-align: center;
+  font-size: clamp(1.25rem, 2vw, 1.7rem);
+  font-weight: 600;
+  color: var(--ink);
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+.qty-input::-webkit-outer-spin-button,
+.qty-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.qty-input:focus {
+  outline: none;
 }
 .ov h4 {
   background: #d9dce0;
@@ -1374,7 +1445,8 @@ footer a:hover {
   border: 1px solid rgba(93, 133, 143, 0.45);
   border-radius: 4px;
   background:
-    radial-gradient(ellipse, rgba(255, 255, 255, 0.95) 38%, rgba(127, 163, 170, 0.35) 43%, transparent 56%) 0 0 / 25% 100%,
+    radial-gradient(ellipse, rgba(255, 255, 255, 0.95) 38%, rgba(127, 163, 170, 0.35) 43%, transparent 56%) 0 0 / 25%
+      100%,
     linear-gradient(145deg, #e8f0f1, #b9d0d4);
   transform: rotate(15deg);
   box-shadow: 2px 4px 6px rgba(17, 49, 57, 0.12);
@@ -1646,7 +1718,7 @@ footer a:hover {
 /* ===== Sellers & seller profile ===== */
 .seller {
   display: flex;
-  align-items: center;
+  align-items: start;
   gap: 0.9rem;
   border: 1px solid var(--line);
   border-radius: 16px;
@@ -1713,7 +1785,7 @@ footer a:hover {
   margin-top: -48px;
 }
 .sl-a {
-  background: linear-gradient(135deg, #25A8D6, #4cc9a0);
+  background: linear-gradient(135deg, #25a8d6, #4cc9a0);
 }
 .sl-b {
   background: linear-gradient(135deg, #7048e8, #9775fa);
@@ -1738,7 +1810,7 @@ footer a:hover {
 }
 .s-cover {
   height: 130px;
-  background: linear-gradient(120deg, #25A8D6, #4cc9a0);
+  background: linear-gradient(120deg, #25a8d6, #4cc9a0);
 }
 .s-body {
   display: flex;
@@ -1807,90 +1879,79 @@ footer a:hover {
   transform: translateY(-50%);
 
   /* Sizing & Typography */
-  width: 28px;  
-  height: 28px; 
+  width: 28px;
+  height: 28px;
   font-size: 16px;
   font-weight: 900;
 
   /* Borders & Colors */
   border-radius: 9999px;
   border: none;
-  background-color: #ffffff; 
-  color: #6b7280; /* text-gray-500 */
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12); /* shadow-[...] */
-  outline: 2px solid transparent; /* focus:outline-none placeholder */
+  background-color: #ffffff;
+  color: #6b7280;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  outline: 2px solid transparent;
   outline-offset: 2px;
-  
-  /* Ring (Simulated using a box-shadow layer or inset border) */
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 4px 14px rgba(0, 0, 0, 0.12); /* ring-1 ring-black/5 combined with shadow */
 
-  /* Interaction & Animation */
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* transition duration-300 */
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.05),
+    0 4px 14px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .carousel-btn-left {
- left: 10px;
+  left: 10px;
 }
 
 .carousel-btn-right {
- right: 10px;
+  right: 10px;
 }
 
-/* Hover States */
 .carousel-btn:hover {
-  background-color: #02b290; /* hover:bg-brand */
-  color: #ffffff; /* hover:text-white */
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 6px 18px rgba(0, 0, 0, 0.18); /* hover:shadow-[...] */
+  background-color: #02b290;
+  color: #ffffff;
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.05),
+    0 6px 18px rgba(0, 0, 0, 0.18);
 }
 
-/* Focus States */
 .carousel-btn:focus {
-  outline: none; /* focus:outline-none */
+  outline: none;
 }
 
-/* Responsive Breakpoints (Tailwind Defaults) */
-
-/* Medium Devices (md: >= 768px) */
 @media (min-width: 768px) {
   .carousel-btn {
-    width: 32px;  /* md:w-8 */
-    height: 32px; /* md:h-8 */
+    width: 32px;
+    height: 32px;
   }
 }
 
-/* Large Devices (lg: >= 1024px) */
 @media (min-width: 1024px) {
   .carousel-btn {
-    width: 36px;  /* lg:w-9 */
-    height: 36px; /* lg:h-9 */
-    font-size: 18px; /* lg:text-lg */
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
   }
 }
 
-/* Extra Large Devices (xl: >= 1280px) */
 @media (min-width: 1280px) {
   .carousel-btn {
-    width: 40px;  /* xl:w-10 */
-    height: 40px; /* xl:h-10 */
-    font-size: 20px; /* xl:text-xl */
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
   }
 }
 
-/* 3X Large Devices (3xl: >= 1920px) */
 @media (min-width: 1920px) {
   .carousel-btn {
-    font-size: 24px; /* 3xl:text-2xl */
+    font-size: 24px;
   }
 }
-
-
 
 .carousel-btn {
   transition: opacity 0.2s ease;
 }
 .carousel-btn.is-hidden {
   opacity: 0;
-  visibility: hidden;      /* keeps layout space, removes from tab order */
+  visibility: hidden;
   pointer-events: none;
 }
-

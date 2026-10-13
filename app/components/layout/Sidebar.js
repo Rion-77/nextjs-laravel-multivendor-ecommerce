@@ -1,9 +1,10 @@
 import Link from "next/link";
 import Icon from "../Icon";
+import { API_URL } from "@/lib/config";
 
 async function getAllCategories() {
   "use cache";
-  const res = await fetch("http://multivendor-ecommerce.test/api/frontend/categories");
+  const res = await fetch(API_URL+'categories');
 
   return res.json();
 }
@@ -12,7 +13,7 @@ async function Sidebar() {
   const data = await getAllCategories();
   const categories = data.categories;
 
-  console.log(categories);
+  // console.log(categories);
   return (
     <aside className="sidew d-none d-lg-block">
       <nav className="side" aria-label="Categories">

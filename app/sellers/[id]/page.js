@@ -1,27 +1,65 @@
+import { API_URL, WEBSITE_NAME } from "@/lib/config";
 import Icon from "../../components/Icon";
+import Link from "next/link";
+import Image from "next/image";
+import ProductCard from "@/app/components/ProductCard";
 
-function SellerSinglePage() {
+// Api request for data
+async function getSingleVendor(id) {
+  "use cache";
+
+  const res = await fetch(`${API_URL}vendors/${id}`);
+
+  return res.json();
+}
+
+// Metadata
+export async function generateMetadata({ params }) {
+  const { id } = await params;
+  const data = await getSingleVendor(id);
+  const vendor = data.vendor;
+
+  return {
+    title: vendor.shop_name + "- Seller - " + WEBSITE_NAME,
+  };
+}
+
+async function SellerSinglePage({ params }) {
+  const { id } = await params;
+  const data = await getSingleVendor(id);
+  const vendor = data.vendor;
+  const products = data.products.data;
+
   return (
     <main className="container-xxl shell">
       <div className="crumb">
-        Home › <a href="sellers.html">Sellers</a> › <b>Technokit Devices</b>
+        <Link href="/">Home</Link> › <Link href="/sellers">Sellers</Link> › <b>{vendor.shop_name}</b>
       </div>
       <section className="s-hero">
         <div className="s-cover"></div>
         <div className="s-body">
-          <div className="shop-logo lg sl-e" aria-hidden="true">
-            TK
+          <div className="shop-logo lg sl-e overflow-hidden" aria-hidden="true">
+            <Image
+              src={vendor.media.length > 0 ? vendor.media[0].original_url : "https://placehold.co/600x400/png"}
+              alt={vendor.shop_name}
+              width={96}
+              height={96}
+            />
           </div>
           <div className="flex-grow-1">
             <h1 className="h4 fw-bold mb-1">
-              Technokit Devices
-              <span className="chip-s ok-s"><Icon name="check" size={14} /> Verified seller</span>
+              {vendor.shop_name}
+              <span className="chip-s ok-s">
+                <Icon name="check" size={14} /> Verified seller
+              </span>
             </h1>
-            <div className="small text-secondary"><Icon name="map-pin" size={14} /> Dhaka · <Icon name="star" size={14} /> 4.5 rating</div>
+            <div className="small text-secondary">
+              <Icon name="map-pin" size={14} /> Dhaka · <Icon name="star" size={14} /> 4.5 rating
+            </div>
           </div>
           <div className="s-stats">
             <div>
-              <b>7</b>
+              <b>{vendor.product_count}</b>
               <span>Shops</span>
             </div>
             <div>
@@ -39,135 +77,37 @@ function SellerSinglePage() {
         <aside className="col-lg-3">
           <div className="box">
             <h2 className="h6 fw-bold">About</h2>
-            <p className="small text-secondary mb-0">
-              Thermometers, oximeters, blood pressure monitors and other certified health devices.
-            </p>
+            <p className="small text-secondary mb-0">{vendor.description}</p>
           </div>
-          <div className="box">
+          {/* <div className="box">
             <h2 className="h6 fw-bold">Shop locations</h2>
             <ul className="s-list">
-              <li><Icon name="map-pin" size={14} /> Dhanmondi</li>
-              <li><Icon name="map-pin" size={14} /> Gulshan</li>
-              <li><Icon name="map-pin" size={14} /> Mirpur</li>
-              <li><Icon name="map-pin" size={14} /> Uttara</li>
+              <li>
+                <Icon name="map-pin" size={14} /> Dhanmondi
+              </li>
+              <li>
+                <Icon name="map-pin" size={14} /> Gulshan
+              </li>
+              <li>
+                <Icon name="map-pin" size={14} /> Mirpur
+              </li>
+              <li>
+                <Icon name="map-pin" size={14} /> Uttara
+              </li>
             </ul>
             <div className="small text-secondary">+ 3 more shops</div>
-          </div>
+          </div> */}
         </aside>
         <div className="col-lg-9">
           <div className="sec mt-0">
             <h2>All products (6)</h2>
-            <a href="sellers.html">All sellers</a>
+            <Link href="/sellers">All sellers</Link>
           </div>
           <div className="pgrid">
-            <article className="pc">
-              <span className="od">28% Off</span>
-              <a href="product.html">
-                <div className="im"><Icon name="thermometer" size={48} /></div>
-                <h3>Thermometer Digital</h3>
-              </a>
-              <div className="mt">Technokit Healthcare Ltd</div>
-              <div className="pr">
-                <b>৳ 216.00</b>
-                <s>৳ 300.00</s>
-              </div>
-              <form action="/cart/add" method="post">
-                <input type="hidden" name="product_id" value="20" />
-                <button className="btn btn-m w-100" type="submit">
-                  Add to cart
-                </button>
-              </form>
-            </article>
-            <article className="pc">
-              <span className="od">15% Off</span>
-              <a href="product.html">
-                <div className="im"><Icon name="thermometer" size={48} /></div>
-                <h3>Pulse Oximeter (Jumper)</h3>
-              </a>
-              <div className="mt">Technokit Healthcare Ltd</div>
-              <div className="pr">
-                <b>৳ 1,572.50</b>
-                <s>৳ 1,850.00</s>
-              </div>
-              <form action="/cart/add" method="post">
-                <input type="hidden" name="product_id" value="21" />
-                <button className="btn btn-m w-100" type="submit">
-                  Add to cart
-                </button>
-              </form>
-            </article>
-            <article className="pc">
-              <span className="od">20% Off</span>
-              <a href="product.html">
-                <div className="im"><Icon name="thermometer" size={48} /></div>
-                <h3>BP Machine Digital (Jumper)</h3>
-              </a>
-              <div className="mt">Technokit Healthcare Ltd</div>
-              <div className="pr">
-                <b>৳ 2,240.00</b>
-                <s>৳ 2,800.00</s>
-              </div>
-              <form action="/cart/add" method="post">
-                <input type="hidden" name="product_id" value="22" />
-                <button className="btn btn-m w-100" type="submit">
-                  Add to cart
-                </button>
-              </form>
-            </article>
-            <article className="pc">
-              <span className="od">18% Off</span>
-              <a href="product.html">
-                <div className="im"><Icon name="thermometer" size={48} /></div>
-                <h3>Electric Hot Water Bag</h3>
-              </a>
-              <div className="mt">Technokit Healthcare Ltd</div>
-              <div className="pr">
-                <b>৳ 451.00</b>
-                <s>৳ 550.00</s>
-              </div>
-              <form action="/cart/add" method="post">
-                <input type="hidden" name="product_id" value="23" />
-                <button className="btn btn-m w-100" type="submit">
-                  Add to cart
-                </button>
-              </form>
-            </article>
-            <article className="pc">
-              <span className="od">20% Off</span>
-              <a href="product.html">
-                <div className="im"><Icon name="thermometer" size={48} /></div>
-                <h3>Getwell Thermometer</h3>
-              </a>
-              <div className="mt">Getwell</div>
-              <div className="pr">
-                <b>৳ 200.00</b>
-                <s>৳ 250.00</s>
-              </div>
-              <form action="/cart/add" method="post">
-                <input type="hidden" name="product_id" value="24" />
-                <button className="btn btn-m w-100" type="submit">
-                  Add to cart
-                </button>
-              </form>
-            </article>
-            <article className="pc">
-              <span className="od">10% Off</span>
-              <a href="product.html">
-                <div className="im"><Icon name="thermometer" size={48} /></div>
-                <h3>Blood Lancets (GetWell)</h3>
-              </a>
-              <div className="mt">Getwell</div>
-              <div className="pr">
-                <b>৳ 67.50</b>
-                <s>৳ 75.00</s>
-              </div>
-              <form action="/cart/add" method="post">
-                <input type="hidden" name="product_id" value="25" />
-                <button className="btn btn-m w-100" type="submit">
-                  Add to cart
-                </button>
-              </form>
-            </article>
+          {/* <div className="category-products"> */}
+            {products.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
           </div>
         </div>
       </div>
