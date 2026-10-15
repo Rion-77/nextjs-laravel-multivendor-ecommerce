@@ -1,5 +1,5 @@
 import { API_URL, WEBSITE_NAME } from "@/lib/config";
-import Icon from "../../components/Icon";
+import Icon from "../../../components/Icon";
 import Link from "next/link";
 import Image from "next/image";
 import ProductCard from "@/app/components/ProductCard";

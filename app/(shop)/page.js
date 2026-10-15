@@ -1,10 +1,10 @@
 import Image from "next/image";
-import styles from "./page.module.css";
-import Sidebar from "./components/layout/Sidebar";
+import styles from "../page.module.css";
+import Sidebar from "../components/layout/Sidebar";
 import Link from "next/link";
-import Icon from "./components/Icon";
-import Carousel from "./components/layout/Carousel";
-import ProductCard from "./components/ProductCard";
+import Icon from "../components/Icon";
+import Carousel from "../components/layout/Carousel";
+import ProductCard from "../components/ProductCard";
 import { API_URL } from "@/lib/config";
 
 async function getHomeContent() {

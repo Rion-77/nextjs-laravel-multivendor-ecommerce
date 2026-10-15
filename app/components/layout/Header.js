@@ -1,7 +1,9 @@
 import Link from "next/link";
 import Icon from "../Icon";
+import CartButton from "../buttons/CartButton";
 
 function Header() {
+  
   return (
     <header className="hd">
       <div className="container-xxl">
@@ -24,9 +26,8 @@ function Header() {
             <a className="pill d-none d-lg-inline-flex" href="#">
               <Icon name="phone" /> Get the app
             </a>
-            <button className="cartbtn" data-bs-toggle="offcanvas" data-bs-target="#cart" aria-label="Open cart">
-              <Icon name="cart" /><span className="bdg">1</span>
-            </button>
+            <CartButton/>
+            
             <a className="pill signin" href="#">
               <i><Icon name="user" /></i>
               <span className="d-none d-md-inline">Sign In</span>

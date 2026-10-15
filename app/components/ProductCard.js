@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AddToCartButton from "./buttons/AddToCart";
 
 function ProductCard({product}) {
   return (
@@ -21,9 +22,10 @@ function ProductCard({product}) {
       </div>
       <form action="/cart/add" method="post">
         <input type="hidden" name="product_id" value="1" />
-        <Link href={`/products/${product.id}`} className="btn btn-m w-100">
+        {/* <Link href={`/products/${product.id}`} className="btn btn-m w-100">
           Add to cart
-        </Link>
+        </Link> */}
+        <AddToCartButton product={product}/>
       </form>
     </article>
   );

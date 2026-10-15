@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Icon from "../components/Icon";
-import ProductCard from "../components/ProductCard";
+import Icon from "../../components/Icon";
+import ProductCard from "../../components/ProductCard";
 import { API_URL } from "@/lib/config";
 
 async function getCategoryProduct(slug) {

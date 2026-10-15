@@ -1,6 +1,7 @@
 import Link from "next/link";
-import Icon from "../../components/Icon";
+import Icon from "../../../components/Icon";
 import { API_URL, WEBSITE_NAME } from "@/lib/config";
+import AddToCartButton from "@/app/components/buttons/AddToCart";
 
 // Api request for data
 async function getSingleProduct(id) {
@@ -95,16 +96,13 @@ async function SingleProducts({ params }) {
                 type="number"
                 name="qty"
                 min="1"
-                value="1"
                 aria-label="Quantity"
               />
               <button type="button" className="qty-btn" aria-label="Increase quantity">
                 +
               </button>
             </div>
-            <button className="btn btn-m w-100 py-2" type="submit">
-              Add to cart
-            </button>
+           <AddToCartButton product={product}/>
           </form>
         </div>
       </div>
