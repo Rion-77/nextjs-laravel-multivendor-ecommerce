@@ -1,10 +1,11 @@
 import Link from "next/link";
 import Icon from "../Icon";
 import { API_URL } from "@/lib/config";
+import Image from "next/image";
 
 async function getAllCategories() {
   "use cache";
-  const res = await fetch(API_URL+'categories');
+  const res = await fetch(API_URL + "categories");
 
   return res.json();
 }
@@ -18,11 +19,20 @@ async function Sidebar() {
     <aside className="sidew d-none d-lg-block">
       <nav className="side" aria-label="Categories">
         {categories.map((category) => (
-          <Link href={`/${category.slug}`} className="category-link" key={category.id}  >
+          <Link
+            href={`/${category.slug}`}
+            className="category-link"
+            key={category.id}
+          >
             <span className="categoy-icon">
-              <Icon name="capsule" />
+              <img
+                style={{ width: "25px", height: "auto" }}
+                src={category.icon_url}
+                alt=""
+              />
             </span>
-            {category.name}<em>›</em>
+            {category.name}
+            <em>›</em>
           </Link>
         ))}
       </nav>

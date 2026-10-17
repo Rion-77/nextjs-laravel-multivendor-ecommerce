@@ -39,7 +39,28 @@
               placeholder="Search products, e.g. Napa"
               aria-label="Search products"
               name="q"
+              aria-controls="search-results"
+              aria-expanded="false"
             /><button aria-label="Search"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="icons.svg#search"></use></svg></button>
+            <div class="search-results" id="search-results" role="list" aria-label="Search suggestions">
+              <a class="search-result" href="product.html" role="listitem">
+                <span class="search-result-image"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="icons.svg#capsule"></use></svg></span>
+                <span class="search-result-copy"><strong>Fast <small>60 ml</small></strong><span class="search-result-type">Oral Suspension</span><span>Paracetamol</span><span>ACME Laboratories Ltd.</span></span>
+              </a>
+              <a class="search-result" href="product.html" role="listitem">
+                <span class="search-result-image"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="icons.svg#capsule"></use></svg></span>
+                <span class="search-result-copy"><strong>Fastel <small>120 mg</small></strong><span class="search-result-type">Tablet</span><span>Fexofenadine Hydrochloride</span><span>Radiant Pharmaceuticals Ltd.</span></span>
+              </a>
+              <a class="search-result" href="product.html" role="listitem">
+                <span class="search-result-image"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="icons.svg#capsule"></use></svg></span>
+                <span class="search-result-copy"><strong>Fast <small>500 mg</small></strong><span class="search-result-type">Tablet</span><span>Paracetamol</span><span>ACME Laboratories Ltd.</span></span>
+              </a>
+              <a class="search-result" href="product.html" role="listitem">
+                <span class="search-result-image"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="icons.svg#capsule"></use></svg></span>
+                <span class="search-result-copy"><strong>Fast XR <small>665 mg</small></strong><span class="search-result-type">Tablet</span><span>Paracetamol</span><span>ACME Laboratories Ltd.</span></span>
+              </a>
+            </div>
+            <div class="search-overlay" aria-hidden="true"></div>
           </form>
           <div class="tools">
             <div class="lang">
@@ -1110,5 +1131,36 @@
 
     <!-- Bootstrap JS: only used for the menu panel, cart drawer and hero carousel -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const searchForm = document.querySelector(".srch");
+      const searchInput = searchForm.querySelector('input[type="search"]');
+      const searchOverlay = searchForm.querySelector(".search-overlay");
+
+      function updateSearchResults() {
+        const hasQuery = searchInput.value.trim().length > 0;
+        document.body.classList.toggle("search-active", hasQuery);
+        searchInput.setAttribute("aria-expanded", String(hasQuery));
+      }
+
+      searchInput.addEventListener("input", updateSearchResults);
+      searchInput.addEventListener("focus", updateSearchResults);
+      searchOverlay.addEventListener("click", () => {
+        document.body.classList.remove("search-active");
+        searchInput.setAttribute("aria-expanded", "false");
+      });
+      document.addEventListener("click", (event) => {
+        if (!searchForm.contains(event.target)) {
+          document.body.classList.remove("search-active");
+          searchInput.setAttribute("aria-expanded", "false");
+        }
+      });
+      searchInput.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          document.body.classList.remove("search-active");
+          searchInput.setAttribute("aria-expanded", "false");
+          searchInput.blur();
+        }
+      });
+    </script>
   </body>
 </html>

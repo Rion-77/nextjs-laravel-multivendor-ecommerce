@@ -9,14 +9,12 @@ import { API_URL } from "@/lib/config";
 
 async function getHomeContent() {
   "use cache";
-  const res = await fetch(API_URL+"home");
+  const res = await fetch(API_URL + "home");
 
   return res.json();
 }
 
 export default async function Home() {
- 
-
   const data = await getHomeContent();
 
   const categories = data.categories;
@@ -80,12 +78,20 @@ export default async function Home() {
         <div className="wrap-x">
           <div className="row-x cats">
             {categories.map((category) => (
-              <a key={category.id} href="index.html" className="cat">
+              <Link
+                key={category.id}
+                href={`/${category.slug}`}
+                className="cat"
+              >
                 <span>
-                  <Icon name="capsule" />
+                  <img
+                    style={{ width: "25px", height: "auto" }}
+                    src={category.icon_url}
+                    alt=""
+                  />
                 </span>
                 {category.name}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -100,7 +106,7 @@ export default async function Home() {
             {/* Products */}
             <Carousel>
               {category.products.map((product) => (
-                <ProductCard key={product.id} product={product}/>
+                <ProductCard key={product.id} product={product} />
               ))}
             </Carousel>
           </div>
