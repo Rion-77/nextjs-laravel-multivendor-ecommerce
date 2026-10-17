@@ -37,117 +37,12 @@ async function SingleProducts({ params }) {
     <div className="flex-grow-1 main-col">
       {/* <!-- ========== CATEGORY PAGE ========== --> */}
       <nav className="category-crumb" aria-label="Breadcrumb">
-        <a href="index.html">Home</a>
+        <Link href="/">Home</Link>
         <span>›</span>
-        <a href="index.html#categories">Category</a>
-        <span>›</span>
-        <a href="category.html">OTC Medicine</a>
-        <span>›</span>
-        <b>Gastric &amp; Digestive Care</b>
+        <Link href={`/${category.slug}`}>{category.name}</Link>
       </nav>
 
-      {/* <section className="category-browse" aria-labelledby="browse-heading">
-        <h1 id="browse-heading">Browse in Gastric &amp; Digestive Care</h1>
-        <div
-          className="category-chips"
-          role="group"
-          aria-label="Filter by subcategory"
-        >
-          <button
-            className="category-chip active"
-            type="button"
-            data-category="all"
-            aria-pressed="true"
-          >
-            <span>
-              <svg className="ui-icon" aria-hidden="true" focusable="false">
-                <use href="icons.svg#bowl"></use>
-              </svg>
-            </span>
-            (All)
-          </button>
-          <button
-            className="category-chip"
-            type="button"
-            data-category="antiulcerant"
-            aria-pressed="false"
-          >
-            <span>
-              <svg className="ui-icon" aria-hidden="true" focusable="false">
-                <use href="icons.svg#capsule"></use>
-              </svg>
-            </span>
-            Antiulcerant
-          </button>
-          <button
-            className="category-chip"
-            type="button"
-            data-category="antiemetic"
-            aria-pressed="false"
-          >
-            <span>
-              <svg className="ui-icon" aria-hidden="true" focusable="false">
-                <use href="icons.svg#flower"></use>
-              </svg>
-            </span>
-            Anti-emetic &amp; Nausea Relief
-          </button>
-          <button
-            className="category-chip"
-            type="button"
-            data-category="antacid"
-            aria-pressed="false"
-          >
-            <span>
-              <svg className="ui-icon" aria-hidden="true" focusable="false">
-                <use href="icons.svg#heart"></use>
-              </svg>
-            </span>
-            Antacid &amp; Alginate
-          </button>
-          <button
-            className="category-chip"
-            type="button"
-            data-category="ors"
-            aria-pressed="false"
-          >
-            <span>
-              <svg className="ui-icon" aria-hidden="true" focusable="false">
-                <use href="icons.svg#droplet"></use>
-              </svg>
-            </span>
-            ORS &amp; Electrolytes
-          </button>
-          <button
-            className="category-chip"
-            type="button"
-            data-category="amoebiasis"
-            aria-pressed="false"
-          >
-            <span>
-              <svg className="ui-icon" aria-hidden="true" focusable="false">
-                <use href="icons.svg#shield"></use>
-              </svg>
-            </span>
-            Amoebiasis &amp; Gut Infection
-          </button>
-          <button
-            className="category-chip"
-            type="button"
-            data-category="laxative"
-            aria-pressed="false"
-          >
-            <span>
-              <svg className="ui-icon" aria-hidden="true" focusable="false">
-                <use href="icons.svg#leaf"></use>
-              </svg>
-            </span>
-            Laxative &amp; Constipation Relief
-          </button>
-        </div>
-      </section> */}
-
-      <form className="category-filters" role="search">
+      {/* <form className="category-filters" role="search">
         <label className="filter-brand">
           <span aria-hidden="true">▽</span>
           <b>Brand</b>
@@ -196,12 +91,12 @@ async function SingleProducts({ params }) {
             <use href="icons.svg#search"></use>
           </svg>
         </label>
-      </form>
+      </form> */}
 
       <div className="category-product-heading">
         <h2>Products</h2>
         <span id="product-count" aria-live="polite">
-          8 items
+          {category.products.length} items
         </span>
       </div>
       <div className="category-products" id="category-products">

@@ -1,0 +1,12 @@
+{
+  "/(checkout)/checkout/page": "app/(checkout)/checkout/page.js",
+  "/(shop)/[categorySlug]/page": "app/(shop)/[categorySlug]/page.js",
+  "/(shop)/order-tracking/page": "app/(shop)/order-tracking/page.js",
+  "/(shop)/page": "app/(shop)/page.js",
+  "/(shop)/products/[id]/page": "app/(shop)/products/[id]/page.js",
+  "/(shop)/sellers/[id]/page": "app/(shop)/sellers/[id]/page.js",
+  "/(shop)/sellers/page": "app/(shop)/sellers/page.js",
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js"
+}

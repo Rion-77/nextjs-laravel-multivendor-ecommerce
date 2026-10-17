@@ -49,7 +49,7 @@ async function SellersPage() {
             <article className="seller" >
               {/* <div className="shop-logo sl-a" aria-hidden="true">
                 </div> */}
-              <Image src={vendor.media.length > 0 ? vendor.media[0].original_url : "https://placehold.co/600x400/png"} alt={vendor.shop_name} width={64} height={64} />
+              <Image src={vendor.logo_url} width={64} height={64} alt={vendor.shop_name} unoptimized/>
               {/* <img
                 className="shop-logo sl-a"
                 src={vendor.media.length > 0 ? vendor.media[0].original_url : "https://placehold.co/600x400"}
@@ -58,7 +58,7 @@ async function SellersPage() {
 
               <div className="flex-grow-1">
                 <h2 className="h6 fw-bold mb-1">
-                  <Link href={`/sellers/${vendor.id}`}>{vendor.shop_name}</Link>
+                  <Link href={`/sellers/${vendor.slug}`}>{vendor.shop_name}</Link>
                 </h2>
                 <div className="small text-secondary">
                   <Icon name="map-pin" size={14} /> Dhaka · <Icon name="star" size={14} /> 4.8
@@ -68,7 +68,7 @@ async function SellersPage() {
                     <Icon name="package" size={14} /> {vendor.products_count} products
                   </span>
                 </div>
-                <Link className="btn btn-m btn-sm py-2 px-3 mt-3" href={`/sellers/${vendor.id}`}>
+                <Link className="btn btn-m btn-sm py-2 px-3 mt-3" href={`/sellers/${vendor.slug}`}>
                   Visit store
                 </Link>
               </div>

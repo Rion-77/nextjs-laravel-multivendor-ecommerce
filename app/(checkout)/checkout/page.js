@@ -52,10 +52,10 @@ function CheckoutPage() {
       });
 
       const status = res.status;
-      console.log(status);
+      // console.log(status);
 
       const data = await res.json();
-      console.log(data);
+      // console.log(data);
       if (status == 422) {
         setErrors(data.errors);
       }

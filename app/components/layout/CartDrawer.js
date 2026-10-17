@@ -107,9 +107,9 @@ function CartDrawer() {
             {cartProducts.map((product) => (
               <div className="flex-grow-1" key={product.id}>
                 <div className="ci">
-                  <Link href={`/products/${product.id}`} className="th overflow-hidden">
+                  <div className="th overflow-hidden">
                     <img className="cart-product-image" src={product.image} />
-                  </Link>
+                  </div>
                   <div className="flex-grow-1">
                     <div className="fw-semibold small">{product.name}</div>
                     <form action="/cart/update" method="post" className="d-flex gap-2 mt-2 flex-wrap">

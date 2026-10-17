@@ -28,7 +28,7 @@ async function SellerSinglePage({ params }) {
   const { id } = await params;
   const data = await getSingleVendor(id);
   const vendor = data.vendor;
-  const products = data.products.data;
+  const products = data.vendor.products;
 
   return (
     <main className="container-xxl shell">
@@ -40,10 +40,11 @@ async function SellerSinglePage({ params }) {
         <div className="s-body">
           <div className="shop-logo lg sl-e overflow-hidden" aria-hidden="true">
             <Image
-              src={vendor.media.length > 0 ? vendor.media[0].original_url : "https://placehold.co/600x400/png"}
+              src={vendor.logo_url}
               alt={vendor.shop_name}
               width={96}
               height={96}
+              unoptimized
             />
           </div>
           <div className="flex-grow-1">
@@ -59,11 +60,7 @@ async function SellerSinglePage({ params }) {
           </div>
           <div className="s-stats">
             <div>
-              <b>{vendor.product_count}</b>
-              <span>Shops</span>
-            </div>
-            <div>
-              <b>6</b>
+              <b>{vendor.products_count}</b>
               <span>Products</span>
             </div>
             <div>
@@ -79,32 +76,13 @@ async function SellerSinglePage({ params }) {
             <h2 className="h6 fw-bold">About</h2>
             <p className="small text-secondary mb-0">{vendor.description}</p>
           </div>
-          {/* <div className="box">
-            <h2 className="h6 fw-bold">Shop locations</h2>
-            <ul className="s-list">
-              <li>
-                <Icon name="map-pin" size={14} /> Dhanmondi
-              </li>
-              <li>
-                <Icon name="map-pin" size={14} /> Gulshan
-              </li>
-              <li>
-                <Icon name="map-pin" size={14} /> Mirpur
-              </li>
-              <li>
-                <Icon name="map-pin" size={14} /> Uttara
-              </li>
-            </ul>
-            <div className="small text-secondary">+ 3 more shops</div>
-          </div> */}
         </aside>
         <div className="col-lg-9">
           <div className="sec mt-0">
-            <h2>All products (6)</h2>
+            <h2>All products ({vendor.products_count})</h2>
             <Link href="/sellers">All sellers</Link>
           </div>
           <div className="pgrid">
-          {/* <div className="category-products"> */}
             {products.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}

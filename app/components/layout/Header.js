@@ -2,6 +2,7 @@ import Link from "next/link";
 import Icon from "../Icon";
 import CartButton from "../buttons/CartButton";
 import SearchBar from "../SearchBar";
+import TrackYourOrderButton from "../buttons/TrackYourOrder";
 
 function Header() {
   return (
@@ -16,27 +17,28 @@ function Header() {
           </Link>
           <SearchBar/>
           <div className="tools">
-            <div className="lang">
+            {/* <div className="lang">
               <button className="on">English</button>
               <button>বাংলা</button>
-            </div>
+            </div> */}
             <Link className="pill d-none d-lg-inline-flex" href="/sellers">
               <Icon name="store" /> Sellers
             </Link>
-            <Link
+            {/* <Link
               className="pill d-none d-lg-inline-flex"
               href="/order-tracking"
             >
               <Icon name="phone" /> Track Your Order
-            </Link>
+            </Link> */}
+            <TrackYourOrderButton/>
             <CartButton />
 
-            <a className="pill signin" href="#">
+            {/* <a className="pill signin" href="#">
               <i>
                 <Icon name="user" />
               </i>
               <span className="d-none d-md-inline">Sign In</span>
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

@@ -1,0 +1,70 @@
+.cart-alert {
+  position: fixed;
+  top: max(8px, env(safe-area-inset-top));
+  right: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(416px, calc(100vw - 12px));
+  min-height: 78px;
+  padding: 1rem 1rem 1rem 1.25rem;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #08a98f;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(-12px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.cart-alert[hidden] {
+  display: none;
+}
+.cart-alert.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.cart-alert-close {
+  align-self: flex-start;
+  margin: -0.45rem -0.4rem 0 0.75rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 1.7rem;
+  font-weight: 300;
+  line-height: 1;
+  opacity: 0.9;
+}
+.cart-alert-close:hover {
+  opacity: 1;
+}
+.cart-alert-progress {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.55);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.cart-alert.is-visible .cart-alert-progress {
+  animation: cart-alert-countdown 4s linear forwards;
+}
+@keyframes cart-alert-countdown {
+  to {
+    transform: scaleX(1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cart-alert {
+    transition: none;
+  }
+  .cart-alert.is-visible .cart-alert-progress {
+    animation: none;
+  }
+}

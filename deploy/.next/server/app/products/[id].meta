@@ -1,0 +1,48 @@
+{
+  "status": 200,
+  "headers": {
+    "link": "</>; rel=preconnect; crossorigin=\"\"",
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/(shop)/layout,_N_T_/(shop)/products/layout,_N_T_/(shop)/products/[id]/layout,_N_T_/(shop)/products/[id]/page"
+  },
+  "postponed": "3861:6[\"id\"][1,{\"nextSegmentId\":5,\"rootFormatContext\":{\"insertionMode\":0,\"selectedValue\":null,\"tagScope\":0,\"viewTransition\":null},\"progressiveChunkSize\":12800,\"resumableState\":{\"idPrefix\":\"\",\"nextFormID\":0,\"streamingFormat\":0,\"instructions\":96,\"hasBody\":true,\"hasHtml\":true,\"unknownResources\":{},\"dnsResources\":{},\"connectResources\":{\"default\":{},\"anonymous\":{\"/\":null},\"credentials\":{}},\"imageResources\":{\"https://laravel-ecommerce.rioncreates.com/storage/38/pants-svgrepo-com.svg\":[],\"https://laravel-ecommerce.rioncreates.com/img/fallback/category-fallback.svg\":[]},\"styleResources\":{\"/_next/static/chunks/0fxi_h-xzasxo.css\":null,\"/_next/static/chunks/3hu24ipzj4k_4.css\":null,\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\":[]},\"scriptResources\":{\"/_next/static/chunks/1ckvzn7sfprko.js\":null,\"/_next/static/chunks/06bs-nf19b2js.js\":null,\"/_next/static/chunks/2-aubugw8unjj.js\":null,\"/_next/static/chunks/0zwkgt6z_hwdh.js\":null,\"/_next/static/chunks/turbopack-3-ry682tkyiqk.js\":null,\"/_next/static/chunks/22305u9au4g4i.js\":null,\"/_next/static/chunks/2ok0znd-77plz.js\":null,\"/_next/static/chunks/1jdq_5h6c_91t.js\":null,\"/_next/static/chunks/0hvn6arhjo4g9.js\":null},\"moduleUnknownResources\":{},\"moduleScriptResources\":{\"/_next/static/chunks/1ckvzn7sfprko.js\":null}},\"replayNodes\":[[\"sl\",0,[[\"Context\",0,[[\"Context\",0,[[\"ServerInsertedHTMLProvider\",0,[[\"Context\",0,[[\"io\",0,[[\"aV\",0,[[\"az\",0,[[\"aq\",0,[[\"is\",0,[[\"Fragment\",0,[[\"Context\",2,[[\"Context\",0,[[\"Context\",0,[[\"Context\",0,[[\"Context\",0,[[\"Context\",0,[[\"Context\",0,[[\"aV\",0,[[\"az\",0,[[\"aq\",0,[[\"ai\",0,[[\"aa\",0,[[\"__next_root_layout_boundary__\",1,[[null,0,[[\"Context\",0,[[\"Fragment\",\"c\",[[\"html\",1,[[\"body\",1,[[null,0,[[\"Context\",0,[[null,0,[[\"Activity\",\"(shop)\",[[\"Context\",\"(shop)\",[[null,2,[[\"Fragment\",0,[[\"E\",0,[[\"D\",0,[[\"Fragment\",0,[[\"n\",0,[[\"Fragment\",0,[[\"G\",0,[[\"Suspense\",0,[[null,0,[[\"l\",0,[[\"x\",0,[[\"w\",0,[[\"F\",0,[[\"Context\",0,[[\"Fragment\",\"c\",[[\"Fragment\",1,[[\"header\",0,[[\"div\",0,[[\"div\",0,[],{\"1\":1}]],null]],null],[\"div\",1,[[\"div\",0,[[\"div\",1,[[null,0,[[\"Activity\",\"products\",[[\"Context\",\"products\",[[null,2,[[\"Fragment\",0,[[\"E\",0,[[\"D\",0,[[\"Fragment\",0,[[\"n\",0,[[\"Fragment\",0,[[\"G\",0,[[\"Fragment\",0,[[null,0,[[\"l\",0,[[\"x\",0,[[\"w\",0,[[\"F\",0,[[\"Context\",0,[[\"Fragment\",\"c\",[[null,1,[[\"Activity\",\"id|d\",[[\"Context\",\"id|d\",[[null,2,[[\"Fragment\",0,[[\"E\",0,[[\"D\",0,[[\"Fragment\",0,[[\"n\",0,[[\"Fragment\",0,[[\"G\",0,[[\"Fragment\",0,[[null,0,[[\"Fragment\",0,[[\"x\",0,[[\"w\",0,[[\"F\",0,[[\"Context\",0,[[\"Fragment\",\"c\",[[null,1,[[\"Activity\",\"__PAGE__\",[[\"Context\",\"__PAGE__\",[[null,2,[[\"Fragment\",0,[[\"E\",0,[[\"D\",0,[[\"Fragment\",0,[[\"n\",0,[[\"Fragment\",0,[[\"G\",0,[[\"Fragment\",0,[[null,0,[[\"Fragment\",0,[[\"x\",0,[[\"w\",0,[[\"F\",0,[[\"Context\",0,[[\"Fragment\",\"c\",[[\"__next_outlet_boundary__\",2,[[\"Suspense\",0,[],4,[\"Suspense Fallback\",0,[],null],4]],null]],{\"0\":3}]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null,[\"Suspense Fallback\",0,[],null],0]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null],[\"ii\",\"/!KHNob3Ap/products/$d$id/__PAGE__/_head\",[[\"Fragment\",\"h\",[[\"__next_metadata_boundary__\",2,[[\"div\",0,[[\"Suspense\",0,[],2,[\"Suspense Fallback\",0,[],null],2]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],null]],\"replaySlots\":null}]eJzlmM1vqzgQwP8XztEKTEhDpT3koxBYoK8kxdivPfiDFohNokBCoOr/vnLavk26p7e3VQ6W0IyxPT/PjMd+0+pms8u02zftJWtYrt2+vQ80Rlh+kv180sa6Ph7bo7FuA31sDU3GjRG5oYCNCLXZ0AIG0UlmWIb+pA1+Pg9+Pml0BySubzpsr2M/89hffDf+8aQ9P6shs6rZderjQMQ+0261cL4p/LvJ0XvdHO+rumBmUiKQ9KzzRnzhG3jZFgg4Oob8wKQQSg7NuiDwobgv72pPWjmFj8V94UcYDivWTV2URhsC7b1XtAUDRwN33siThqBV2GDp9MQVB1p4tSejDkM1dvyC0ofivvC6cO6BYDU5BquJkcwn+n05aVULykkbzidt6GyKYOYbzI1z7ibrFDi6V26KsJx0UaG34VJvo+ShjeabNlRtNvz4bz4laj0ERgcqbIPJVq15wxdxy/rNIQDHnEkHYNg2WPWBhmAyEkHlbymwSiYTNV8fyOhAl3bPXbtDkIugD4eBOc1pFfdBGgFs+oK54wYBuwmqCODOt4PFFy/vnFdKgSFowXvvDucM5FsKhsq2ni6SStnEgd1gaPUBvNB/reW3befpdI3SWGDHzvnMG3ml14YlasL5XRPOk8dw/jAK5xPV9h//TVp42idRUmC98NSv1XxkEetsEY6Czq5R6udcJnUAk5ICo8GpX+Kl1an9R6Yv1Hyss0oK9AOBRhUAnFP3WCAY7QIQKTsqavqWsvGX/F/cwnNuLgW2zkGSM7W2Kqo5ZEouL+T/X9/aUsgOWDo1df0cgfrwK/6qdXMm3zMTV16l11nnb/HMG0WztqDSafDSG3nrZosX4atfTGcI+tZlLJ50DZJOkS2vlNXynJWfY/PEaopAJJgZfeW6c/8qEOR9AJ2P/AjsjsCkV7Z8+flvx1WVtNj9T9y3CNj71Ew6quaTuc4X0/6+GB+o63QoxYLODKFyEIVJh8DjnklxoF/7nIb7U34CosGdLRE81kg6Jens8mQHsLtsaZzJrZ5LVrwsjzeeFGuv3IBg5u8RNITa8wQ4OgL5d14mSuOSuFfLyDxntIJ2QeBReM50Q4ElWDeRnhPnSB4FX4QXeZ9+9g3Sr76GjqBf4zS+VpbDC5au03LXbk8M76IDTacGd5Pum//VKJ3q1Jz2AfzW5wrz3f1FvktqDCOdSXtPYNR7M/QaA2eNQaJ/Yyiom5R84R+oFCXrjArBuLpiPzyGF2dsfqDw8fUhnbbUFTmV0fccuFE1XgCdlrnHLYJWidPwSmu4u+N5DC+BOJ0ZtFAxHG+pFHt8yW5HPs6PfQDP9FcYu+Hq4t7gKZ9SMbtyBSDQqi5ru5NPNvRMd5Vx2p3HKe+oquuqtarxVtx1WvpZl/zD7VefhplxztyjuNazIlw9nPvbiirGH/XxDKdYMOlUn3nsV83CgJUj0PQB9AWXyelufL38Hi/iFUOn5u7rBz/oGHyxvmBH3CSni3ij2KE00a/1Thau0Dm3GQX27qNOjnSUxttTLVxdskPSPhAzPMUsV+9KMumulx+7iFvm2h3/eANwSRrvcRpd5rwqaqnp66wz5Ln+as6LxLBnr3/+qQ20hrzW2u3P54FWN0Rk2q2p6wOtKWRWN0RutVvjxgZgdGMYljkc/2Fb9s1Ay47bQr3eDoE9tEc3wB4OtF12IKLgpMm0W1vX3wdaTuq741YUrGjiM+ULEXV2ob37HO5Ts8sIjzeb5gfZERkRmZ0W+P4+0LKK7bptk/HpZl/xyU4t/e39/f1vNDKpoQ==",
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/!KHNob3Ap",
+    "/!KHNob3Ap/products/$d$id/__PAGE__"
+  ],
+  "prefetchHints": {
+    "hints": 16448,
+    "slots": {
+      "children": {
+        "hints": 16416,
+        "slots": {
+          "children": {
+            "hints": 16448,
+            "slots": {
+              "children": {
+                "hints": 16480,
+                "slots": {
+                  "children": {
+                    "hints": 16544,
+                    "slots": null
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "routeCache": {
+    "key": "/route-cache/APP_PAGE/49c83c853ed38c7d6b447550985cd3bfac187f77d451c23dc74d401892347a1e/$/products/[id]",
+    "owner": {
+      "kind": "APP_PAGE",
+      "sourceRoute": "/(shop)/products/[id]/page"
+    },
+    "isFallback": true
+  }
+}

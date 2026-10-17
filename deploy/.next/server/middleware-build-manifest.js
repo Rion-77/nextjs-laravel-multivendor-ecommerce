@@ -1,0 +1,124 @@
+globalThis.__BUILD_MANIFEST = {
+  "pages": {
+    "/_app": []
+  },
+  "devFiles": [],
+  "polyfillFiles": [
+    "static/chunks/0cz1d0mv5g_q7.js"
+  ],
+  "lowPriorityFiles": [
+    "static/br2mZs7yZ9kRJeIcKdr8P/_buildManifest.js",
+    "static/br2mZs7yZ9kRJeIcKdr8P/_ssgManifest.js",
+    "static/br2mZs7yZ9kRJeIcKdr8P/_clientMiddlewareManifest.js"
+  ],
+  "rootMainFiles": [
+    "static/chunks/1ckvzn7sfprko.js",
+    "static/chunks/06bs-nf19b2js.js",
+    "static/chunks/2-aubugw8unjj.js",
+    "static/chunks/0zwkgt6z_hwdh.js",
+    "static/chunks/turbopack-3-ry682tkyiqk.js"
+  ],
+  "rootMainFilesTree": {},
+  "pagesChunkGroupBootstrapParams": {
+    "/_not-found/page": {
+      "otherChunks": [
+        "static/chunks/1ckvzn7sfprko.js",
+        "static/chunks/06bs-nf19b2js.js",
+        "static/chunks/2-aubugw8unjj.js",
+        "static/chunks/0zwkgt6z_hwdh.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/_global-error/page": {
+      "otherChunks": [
+        "static/chunks/1ckvzn7sfprko.js",
+        "static/chunks/06bs-nf19b2js.js",
+        "static/chunks/2-aubugw8unjj.js",
+        "static/chunks/0zwkgt6z_hwdh.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(checkout)/checkout/page": {
+      "otherChunks": [
+        "static/chunks/1ckvzn7sfprko.js",
+        "static/chunks/06bs-nf19b2js.js",
+        "static/chunks/2-aubugw8unjj.js",
+        "static/chunks/0zwkgt6z_hwdh.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(shop)/page": {
+      "otherChunks": [
+        "static/chunks/1ckvzn7sfprko.js",
+        "static/chunks/06bs-nf19b2js.js",
+        "static/chunks/2-aubugw8unjj.js",
+        "static/chunks/0zwkgt6z_hwdh.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(shop)/[categorySlug]/page": {
+      "otherChunks": [
+        "static/chunks/1ckvzn7sfprko.js",
+        "static/chunks/06bs-nf19b2js.js",
+        "static/chunks/2-aubugw8unjj.js",
+        "static/chunks/0zwkgt6z_hwdh.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(shop)/order-tracking/page": {
+      "otherChunks": [
+        "static/chunks/1ckvzn7sfprko.js",
+        "static/chunks/06bs-nf19b2js.js",
+        "static/chunks/2-aubugw8unjj.js",
+        "static/chunks/0zwkgt6z_hwdh.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(shop)/products/[id]/page": {
+      "otherChunks": [
+        "static/chunks/1ckvzn7sfprko.js",
+        "static/chunks/06bs-nf19b2js.js",
+        "static/chunks/2-aubugw8unjj.js",
+        "static/chunks/0zwkgt6z_hwdh.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(shop)/sellers/page": {
+      "otherChunks": [
+        "static/chunks/1ckvzn7sfprko.js",
+        "static/chunks/06bs-nf19b2js.js",
+        "static/chunks/2-aubugw8unjj.js",
+        "static/chunks/0zwkgt6z_hwdh.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    },
+    "/(shop)/sellers/[id]/page": {
+      "otherChunks": [
+        "static/chunks/1ckvzn7sfprko.js",
+        "static/chunks/06bs-nf19b2js.js",
+        "static/chunks/2-aubugw8unjj.js",
+        "static/chunks/0zwkgt6z_hwdh.js"
+      ],
+      "runtimeModuleIds": [
+        94553
+      ]
+    }
+  },
+  "chunkLoadingGlobal": "TURBOPACK"
+};

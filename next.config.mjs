@@ -18,6 +18,7 @@
 const nextConfig = {
   cacheComponents: true, 
   partialPrefetching: true,
+  output: 'standalone',
 
   images: {
     dangerouslyAllowSVG: true,
@@ -25,6 +26,11 @@ const nextConfig = {
       {
         protocol: "http",
         hostname: "multivendor-ecommerce.test",
+        pathname: "/**", 
+      },
+      {
+        protocol: "https",
+        hostname: "laravel-ecommerce.rioncreates.com",
         pathname: "/**", 
       },
     ],

@@ -1,0 +1,3 @@
+{
+  "/(shop)/order-tracking/page": "app/(shop)/order-tracking/page.js"
+}

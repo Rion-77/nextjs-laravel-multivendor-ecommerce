@@ -1,0 +1,42 @@
+{
+  "status": 200,
+  "headers": {
+    "link": "</>; rel=preconnect; crossorigin=\"\"",
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/(shop)/layout,_N_T_/(shop)/sellers/layout,_N_T_/(shop)/sellers/page,_N_T_/sellers"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/!KHNob3Ap",
+    "/!KHNob3Ap/sellers/__PAGE__"
+  ],
+  "prefetchHints": {
+    "hints": 49216,
+    "slots": {
+      "children": {
+        "hints": 49184,
+        "slots": {
+          "children": {
+            "hints": 49216,
+            "slots": {
+              "children": {
+                "hints": 49312,
+                "slots": null
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "routeCache": {
+    "key": "/route-cache/APP_PAGE/18a61b1f9768ff39887a36edbea24f0cf3f6045b0cf002016375f6b94c9449ec/$/sellers",
+    "owner": {
+      "kind": "APP_PAGE",
+      "sourceRoute": "/(shop)/sellers/page"
+    },
+    "isFallback": false
+  }
+}

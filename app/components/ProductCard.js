@@ -5,7 +5,7 @@ function ProductCard({product}) {
   return (
     <article className="pc">
       <span className="od">{(100 - (product.offer_price / product.base_price * 100)).toFixed(2)}% Off</span>
-      <Link href={`/products/${product.id}`}>
+      <Link href={`/products/${product.slug}`}>
         <div className="im">
           <img
             className="product-image"
@@ -21,10 +21,6 @@ function ProductCard({product}) {
         <s>৳ {product.base_price}</s>
       </div>
       <form action="/cart/add" method="post">
-        <input type="hidden" name="product_id" value="1" />
-        {/* <Link href={`/products/${product.id}`} className="btn btn-m w-100">
-          Add to cart
-        </Link> */}
         <AddToCartButton product={product}/>
       </form>
     </article>

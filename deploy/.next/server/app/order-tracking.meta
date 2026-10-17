@@ -1,0 +1,42 @@
+{
+  "status": 200,
+  "headers": {
+    "link": "</>; rel=preconnect; crossorigin=\"\"",
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/(shop)/layout,_N_T_/(shop)/order-tracking/layout,_N_T_/(shop)/order-tracking/page,_N_T_/order-tracking"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/!KHNob3Ap",
+    "/!KHNob3Ap/order-tracking/__PAGE__"
+  ],
+  "prefetchHints": {
+    "hints": 49216,
+    "slots": {
+      "children": {
+        "hints": 49184,
+        "slots": {
+          "children": {
+            "hints": 49216,
+            "slots": {
+              "children": {
+                "hints": 49312,
+                "slots": null
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "routeCache": {
+    "key": "/route-cache/APP_PAGE/9b3d63f2d377f1a549084c67915dd8cb94fc2ddddce6417b199d366ce083f4c2/$/order-tracking",
+    "owner": {
+      "kind": "APP_PAGE",
+      "sourceRoute": "/(shop)/order-tracking/page"
+    },
+    "isFallback": false
+  }
+}

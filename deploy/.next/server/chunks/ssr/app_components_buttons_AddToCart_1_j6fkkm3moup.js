@@ -1,0 +1,3 @@
+module.exports=[54189,a=>{"use strict";var b=a.i(87924),c=a.i(11721),d=a.i(72131);a.s(["default",0,function({product:a,quantity:e=1}){let{cartProducts:f,setCartProducts:g}=(0,d.useContext)(c.CartContext);return(0,b.jsx)(b.Fragment,{children:(0,b.jsx)("button",{onClick:()=>{let b;return b={id:a.id,name:a.name,quantity:e,offer_price:a.offer_price??0,base_price:a.base_price,image:a.thumbnail_url},void g(a=>a.some(a=>a.id==b.id)?a.map(a=>a.id==b.id?{...a,quantity:a.quantity+e}:a):[...a,b])},className:"btn btn-m w-100 py-2",type:"button",children:"Add to cart"})})}])}];
+
+//# sourceMappingURL=app_components_buttons_AddToCart_1_j6fkkm3moup.js.map

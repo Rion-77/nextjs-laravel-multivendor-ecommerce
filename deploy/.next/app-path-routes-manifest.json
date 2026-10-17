@@ -1,0 +1,12 @@
+{
+  "/(checkout)/checkout/page": "/checkout",
+  "/(shop)/[categorySlug]/page": "/[categorySlug]",
+  "/(shop)/order-tracking/page": "/order-tracking",
+  "/(shop)/page": "/",
+  "/(shop)/products/[id]/page": "/products/[id]",
+  "/(shop)/sellers/[id]/page": "/sellers/[id]",
+  "/(shop)/sellers/page": "/sellers",
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/favicon.ico/route": "/favicon.ico"
+}

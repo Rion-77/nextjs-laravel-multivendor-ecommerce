@@ -58,12 +58,12 @@ async function SingleProducts({ params }) {
             </div>
             <div className="small">
               By&nbsp;
-              <a
+              <Link
                 className="fw-semibold text-decoration-underline"
-                href="index.html"
+                href={`/sellers/${product.vendor.slug}`}
               >
                 {product.vendor.shop_name}
-              </a>
+              </Link>
             </div>
           </div>
           <ProductPriceCard product={product}/>

@@ -18,6 +18,7 @@
     />
     <!-- Custom styles -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="global.css" />
   </head>
   <body>
     <!-- Page loader: pure CSS, fades out automatically -->
@@ -238,5 +239,43 @@
       <a href="checkout.html"><span class="i"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="icons.svg#cart"></use></svg></span>Cart</a>
       <a href="#"><span class="i"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="icons.svg#user"></use></svg></span>Account</a>
     </nav>
+    <div class="cart-alert" id="cart-alert" role="status" aria-live="polite" aria-atomic="true" hidden>
+      <span>Added To Your Cart</span>
+      <button class="cart-alert-close" type="button" aria-label="Dismiss notification">&times;</button>
+      <span class="cart-alert-progress" aria-hidden="true"></span>
+    </div>
+    <script>
+      const cartAlert = document.getElementById("cart-alert");
+      const cartAlertProgress = cartAlert.querySelector(".cart-alert-progress");
+      const cartAlertClose = cartAlert.querySelector(".cart-alert-close");
+      let cartAlertTimeout;
+      let cartAlertHideTimeout;
+
+      function dismissCartAlert() {
+        cartAlert.classList.remove("is-visible");
+        clearTimeout(cartAlertTimeout);
+        clearTimeout(cartAlertHideTimeout);
+        cartAlertHideTimeout = window.setTimeout(() => {
+          cartAlert.hidden = true;
+        }, 250);
+      }
+
+      document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
+        form.addEventListener("submit", (event) => {
+          event.preventDefault();
+          clearTimeout(cartAlertTimeout);
+          clearTimeout(cartAlertHideTimeout);
+          cartAlert.hidden = false;
+          cartAlert.classList.remove("is-visible");
+          cartAlertProgress.style.animation = "none";
+          void cartAlertProgress.offsetWidth;
+          cartAlertProgress.style.animation = "";
+          requestAnimationFrame(() => cartAlert.classList.add("is-visible"));
+          cartAlertTimeout = window.setTimeout(dismissCartAlert, 4000);
+        });
+      });
+
+      cartAlertClose.addEventListener("click", dismissCartAlert);
+    </script>
   </body>
 </html>

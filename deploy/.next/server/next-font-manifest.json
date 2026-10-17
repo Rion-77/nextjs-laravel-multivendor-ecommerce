@@ -1,0 +1,15 @@
+{
+  "app": {
+    "[project]/app/(checkout)/checkout/page": [],
+    "[project]/app/(shop)/[categorySlug]/page": [],
+    "[project]/app/(shop)/order-tracking/page": [],
+    "[project]/app/(shop)/page": [],
+    "[project]/app/(shop)/products/[id]/page": [],
+    "[project]/app/(shop)/sellers/[id]/page": [],
+    "[project]/app/(shop)/sellers/page": [],
+    "[project]/app/_not-found/page": []
+  },
+  "appUsingSizeAdjust": false,
+  "pages": {},
+  "pagesUsingSizeAdjust": false
+}

@@ -2,6 +2,7 @@ import Link from "next/link";
 import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 import Icon from "../components/Icon";
+import TrackYourOrderButton from "../components/buttons/TrackYourOrder";
 
 export default function RootLayout({ children }) {
   return (
@@ -13,20 +14,18 @@ export default function RootLayout({ children }) {
             <b><Icon name="medical-cross" /></b>CareKart
           </Link>
           <div className="tools">
-            <div className="lang">
+            {/* <div className="lang">
               <button className="on">English</button>
               <button>বাংলা</button>
-            </div>
+            </div> */}
             <Link className="pill d-none d-lg-inline-flex" href="/sellers">
               <Icon name="store" /> Sellers
             </Link>
-            <a className="pill d-none d-lg-inline-flex" href="#">
-              <Icon name="phone" /> Get the app
-            </a>    
-            <a className="pill signin" href="#">
+            <TrackYourOrderButton/>   
+            {/* <a className="pill signin" href="#">
               <i><Icon name="user" /></i>
               <span className="d-none d-md-inline">Sign In</span>
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

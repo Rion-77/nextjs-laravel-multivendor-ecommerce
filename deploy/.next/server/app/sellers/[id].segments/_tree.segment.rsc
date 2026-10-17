@@ -1,0 +1,11 @@
+:HL["/_next/static/chunks/0fxi_h-xzasxo.css","style"]
+:HL["/_next/static/chunks/3hu24ipzj4k_4.css","style"]
+:HC["/",""]
+:HL["https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap","style"]
+:HL["https://laravel-ecommerce.rioncreates.com/storage/38/pants-svgrepo-com.svg","image"]
+:HL["https://laravel-ecommerce.rioncreates.com/img/fallback/category-fallback.svg","image"]
+4:[["children",{"s":"__PAGE__","h":16546}]]
+3:[["children",{"s":{"n":"id","t":"d","k":null,"s":[]},"h":16482,"c":"$Q4"}]]
+2:[["children",{"s":"sellers","h":16450,"c":"$Q3"}]]
+1:[["children",{"s":"(shop)","h":16418,"c":"$Q2"}]]
+0:{"b":"br2mZs7yZ9kRJeIcKdr8P","t":{"t":{"s":"","h":16470,"c":"$Q1"}}}

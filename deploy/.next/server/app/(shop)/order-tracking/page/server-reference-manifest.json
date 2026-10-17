@@ -1,0 +1,15 @@
+{
+  "node": {
+    "8008896809208543cd16a7b2c6ab9c4521a0ae1510": {
+      "workers": {
+        "app/(shop)/order-tracking/page": {
+          "moduleId": 25637,
+          "async": false
+        }
+      },
+      "exportedName": "$$RSC_SERVER_CACHE_0",
+      "filename": "app/components/layout/Sidebar.js"
+    }
+  },
+  "edge": {}
+}

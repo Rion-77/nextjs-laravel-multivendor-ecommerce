@@ -1,0 +1,86 @@
+{
+  "node": {
+    "8008896809208543cd16a7b2c6ab9c4521a0ae1510": {
+      "workers": {
+        "app/(shop)/[categorySlug]/page": {
+          "moduleId": 50963,
+          "async": false
+        },
+        "app/(shop)/order-tracking/page": {
+          "moduleId": 25637,
+          "async": false
+        },
+        "app/(shop)/page": {
+          "moduleId": 36070,
+          "async": false
+        },
+        "app/(shop)/products/[id]/page": {
+          "moduleId": 96820,
+          "async": false
+        },
+        "app/(shop)/sellers/[id]/page": {
+          "moduleId": 17357,
+          "async": false
+        },
+        "app/(shop)/sellers/page": {
+          "moduleId": 94197,
+          "async": false
+        }
+      },
+      "filename": "app/components/layout/Sidebar.js",
+      "exportedName": "$$RSC_SERVER_CACHE_0"
+    },
+    "803feb33989a0a9776c32b155f8beb68ece689a440": {
+      "workers": {
+        "app/(shop)/page": {
+          "moduleId": 36070,
+          "async": false
+        }
+      },
+      "filename": "app/(shop)/page.js",
+      "exportedName": "$$RSC_SERVER_CACHE_0"
+    },
+    "c05af2eb01d585fc1856590b4f1de0ef267e661e08": {
+      "workers": {
+        "app/(shop)/[categorySlug]/page": {
+          "moduleId": 50963,
+          "async": false
+        }
+      },
+      "filename": "app/(shop)/[categorySlug]/page.js",
+      "exportedName": "$$RSC_SERVER_CACHE_0"
+    },
+    "c0d91dfe2c4855c0a37c29e2a94d760a54bce0af1c": {
+      "workers": {
+        "app/(shop)/products/[id]/page": {
+          "moduleId": 96820,
+          "async": false
+        }
+      },
+      "filename": "app/(shop)/products/[id]/page.js",
+      "exportedName": "$$RSC_SERVER_CACHE_0"
+    },
+    "805e36af6e41ce6922d117919e91b21a9cf368cde9": {
+      "workers": {
+        "app/(shop)/sellers/page": {
+          "moduleId": 94197,
+          "async": false
+        }
+      },
+      "filename": "app/(shop)/sellers/page.js",
+      "exportedName": "$$RSC_SERVER_CACHE_0"
+    },
+    "c0c496e4a10c5a62c35d062419005e60cccf090fa1": {
+      "workers": {
+        "app/(shop)/sellers/[id]/page": {
+          "moduleId": 17357,
+          "async": false
+        }
+      },
+      "filename": "app/(shop)/sellers/[id]/page.js",
+      "exportedName": "$$RSC_SERVER_CACHE_0"
+    }
+  },
+  "edge": {},
+  "encryptionKey": "MVNqMsa7+JLzrSX+FJV4d4mVgUim+aZlLCd/M/22i0g="
+}

@@ -1,0 +1,25 @@
+{
+  "node": {
+    "8008896809208543cd16a7b2c6ab9c4521a0ae1510": {
+      "workers": {
+        "app/(shop)/products/[id]/page": {
+          "moduleId": 96820,
+          "async": false
+        }
+      },
+      "exportedName": "$$RSC_SERVER_CACHE_0",
+      "filename": "app/components/layout/Sidebar.js"
+    },
+    "c0d91dfe2c4855c0a37c29e2a94d760a54bce0af1c": {
+      "workers": {
+        "app/(shop)/products/[id]/page": {
+          "moduleId": 96820,
+          "async": false
+        }
+      },
+      "exportedName": "$$RSC_SERVER_CACHE_0",
+      "filename": "app/(shop)/products/[id]/page.js"
+    }
+  },
+  "edge": {}
+}
