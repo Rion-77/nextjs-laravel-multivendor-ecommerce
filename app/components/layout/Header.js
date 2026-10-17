@@ -23,9 +23,9 @@ function Header() {
             <Link className="pill d-none d-lg-inline-flex" href="/sellers">
               <Icon name="store" /> Sellers
             </Link>
-            <a className="pill d-none d-lg-inline-flex" href="#">
-              <Icon name="phone" /> Get the app
-            </a>
+            <Link className="pill d-none d-lg-inline-flex" href="/order-tracking">
+              <Icon name="phone" /> Track Your Order
+            </Link>
             <CartButton/>
             
             <a className="pill signin" href="#">

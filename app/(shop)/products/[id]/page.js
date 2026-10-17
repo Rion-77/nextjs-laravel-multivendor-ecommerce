@@ -2,6 +2,8 @@ import Link from "next/link";
 import Icon from "../../../components/Icon";
 import { API_URL, WEBSITE_NAME } from "@/lib/config";
 import AddToCartButton from "@/app/components/buttons/AddToCart";
+import ProductQuantitySelector from "@/app/components/ProductPriceCard";
+import ProductPriceCard from "@/app/components/ProductPriceCard";
 
 // Api request for data
 async function getSingleProduct(id) {
@@ -43,11 +45,7 @@ async function SingleProducts({ params }) {
           <div className="gal box-shadow-primary">
             <img
               className="product-image"
-              src={
-                product.media.length > 0
-                  ? product.media[0].original_url
-                  : "https://placehold.co/600x400"
-              }
+              src={product.image_url}
               alt={product.name}
             />
           </div>
@@ -68,54 +66,18 @@ async function SingleProducts({ params }) {
               </a>
             </div>
           </div>
-          <form className="box" action="/cart/add" method="post">
-            <input type="hidden" name="product_id" value="26" />
-            <div className="mrp">
-              <s>MRP ৳{product.offer_price}</s>
-              <span className="off">
-                {(
-                  ((product.base_price - product.offer_price) /
-                    product.base_price) *
-                  100
-                ).toFixed(2)}
-                % Off
-              </span>
-            </div>
-            <div className="best mt-1">
-              <small>Best Price</small> MRP ৳{product.offer_price}
-            </div>
-            {/* <select className="sel my-3" name="pack" aria-label="Pack size">
-              <option>1x50ml</option>
-            </select> */}
-            <div className="qty-stepper mb-3" role="group" aria-label="Quantity selector">
-              <button type="button" className="qty-btn" aria-label="Decrease quantity">
-                −
-              </button>
-              <input
-                className="qty-input"
-                type="number"
-                name="qty"
-                min="1"
-                aria-label="Quantity"
-              />
-              <button type="button" className="qty-btn" aria-label="Increase quantity">
-                +
-              </button>
-            </div>
-           <AddToCartButton product={product}/>
-          </form>
+          <ProductPriceCard product={product}/>
         </div>
       </div>
 
       {/* Key Details */}
-      {/* Used Description value for now replace it later with actual value */}
       <details className="box mt-2">
         <summary className="d-flex justify-content-between align-items-center">
           <h2 className="h6 fw-bold m-0">Key facts</h2>
           <span className="toggle">Show details</span>
         </summary>
         <p className="small text-secondary mt-2 mb-0">{product.description}</p>
-      </details>+
+      </details>
 
       {/* Descrption */}
       <div className="box ov">

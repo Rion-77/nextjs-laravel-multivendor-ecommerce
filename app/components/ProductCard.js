@@ -9,7 +9,7 @@ function ProductCard({product}) {
         <div className="im">
           <img
             className="product-image"
-            src={product.media.length > 0 ? product.media[0].original_url : "https://placehold.co/600x400"}
+            src={product.thumbnail_url}
             alt={product.name}
           />
         </div>

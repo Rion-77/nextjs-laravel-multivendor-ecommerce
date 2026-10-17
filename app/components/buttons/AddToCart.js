@@ -3,7 +3,7 @@
 import { CartContext } from "@/app/context/CartContext";
 import { useContext, useEffect } from "react";
 
-function AddToCartButton({ product }) {
+function AddToCartButton({ product, quantity = 1 }) {
   const { cartProducts, setCartProducts } = useContext(CartContext);
 
   // Add product to cart
@@ -11,10 +11,10 @@ function AddToCartButton({ product }) {
     const newProduct = {
       id: product.id,
       name: product.name,
-      quantity: 1,
+      quantity: quantity,
       offer_price: product.offer_price ?? 0,
       base_price: product.base_price,
-      image: product.media.length > 0 ? product.media[0].original_url : "https://placehold.co/600x400",
+      image: product.thumbnail_url,
     };
 
     setCartProducts((prev) => {
@@ -23,7 +23,7 @@ function AddToCartButton({ product }) {
       if (productExists) {
         return prev.map((product) => {
           if (product.id == newProduct.id) {
-            return { ...product, quantity: product.quantity + 1 };
+            return { ...product, quantity: product.quantity + quantity };
           } else {
             return product;
           }

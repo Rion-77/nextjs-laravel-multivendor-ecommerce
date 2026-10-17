@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Track your order – CareKart</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="hd">
+      <div class="container-xxl">
+        <div class="hrow">
+          <a class="logo" href="index.html"><b><i class="bi bi-plus-lg" aria-hidden="true"></i></b>CareKart</a>
+          <form class="srch" action="index.html" method="get" role="search">
+            <input
+              type="search"
+              placeholder="Search products, e.g. Napa"
+              aria-label="Search products"
+              name="q"
+            /><button aria-label="Search"><i class="bi bi-search" aria-hidden="true"></i></button>
+          </form>
+          <div class="tools">
+            <div class="lang">
+              <button class="on" type="button">English</button><button type="button">বাংলা</button>
+            </div>
+            <a class="pill d-none d-lg-inline-flex" href="sellers.html"><i class="bi bi-shop" aria-hidden="true"></i> Sellers</a>
+            <button class="cartbtn" type="button" aria-label="Open cart">
+              <i class="bi bi-cart3" aria-hidden="true"></i><span class="bdg">1</span>
+            </button>
+            <a class="pill signin" href="#"><i class="bi bi-person" aria-hidden="true"></i><span class="d-none d-md-inline">Sign In</span></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container-xxl shell order-track-page">
+      <nav class="crumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a> › <a href="#">My orders</a> ›
+        <b>Track order</b>
+      </nav>
+
+      <section class="order-track-heading" aria-labelledby="order-track-title">
+        <div>
+          <p class="order-track-eyebrow">Your order, every step of the way</p>
+          <h1 id="order-track-title">Track your order</h1>
+          <p>See the latest delivery updates and estimated arrival time.</p>
+        </div>
+        <a class="order-track-help-link" href="mailto:support@example.com">
+          <i class="bi bi-headset" aria-hidden="true"></i>
+          Need help?
+        </a>
+      </section>
+
+      <form class="order-track-search" action="#tracking-result" method="get">
+        <label for="order-number">Have another order to track?</label>
+        <div class="order-track-search-controls">
+          <div class="order-track-input-wrap">
+            <i class="bi bi-clipboard" aria-hidden="true"></i>
+            <input
+              id="order-number"
+              name="order_number"
+              type="text"
+              value="CK-2026-04821"
+              placeholder="Enter your order number"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <button class="btn btn-m" type="submit">Track order</button>
+        </div>
+        <small>Find your order number in your confirmation email or SMS.</small>
+      </form>
+
+      <div class="order-track-layout" id="tracking-result">
+        <section class="order-track-main" aria-label="Order delivery status">
+          <article class="order-track-card order-track-delivery">
+            <div class="order-track-status">
+              <span class="order-track-status-icon" aria-hidden="true">
+                <i class="bi bi-truck" aria-hidden="true"></i>
+              </span>
+              <div>
+                <p class="order-track-status-label">Your package is on its way</p>
+                <h2>Out for delivery</h2>
+                <p>Our delivery partner is bringing your order to you.</p>
+              </div>
+              <span class="order-track-live"><i></i> Live update</span>
+            </div>
+            <div class="order-track-arrival">
+              <span>Estimated delivery</span>
+              <strong>Today, 2:30 PM – 4:30 PM</strong>
+            </div>
+            <ol class="order-track-timeline" aria-label="Delivery progress">
+              <li class="is-complete">
+                <span class="order-track-step-icon"><i class="bi bi-check-lg" aria-hidden="true"></i></span>
+                <span><strong>Order confirmed</strong><small>Oct 14 · 10:24 AM</small></span>
+              </li>
+              <li class="is-complete">
+                <span class="order-track-step-icon"><i class="bi bi-box-seam" aria-hidden="true"></i></span>
+                <span><strong>Ready for dispatch</strong><small>Oct 15 · 8:15 AM</small></span>
+              </li>
+              <li class="is-current" aria-current="step">
+                <span class="order-track-step-icon"><i class="bi bi-truck" aria-hidden="true"></i></span>
+                <span><strong>Out for delivery</strong><small>Today · 1:05 PM</small></span>
+              </li>
+              <li>
+                <span class="order-track-step-icon"><i class="bi bi-house" aria-hidden="true"></i></span>
+                <span><strong>Delivered</strong><small>Pending</small></span>
+              </li>
+            </ol>
+          </article>
+
+          <article class="order-track-card order-track-items">
+            <div class="order-track-card-heading">
+              <div>
+                <h2>Items in this delivery</h2>
+                <p>1 item · Sold by HealthPlus Drugstore</p>
+              </div>
+              <span class="order-track-item-count">01</span>
+            </div>
+            <div class="order-track-product">
+              <div class="order-track-product-image" aria-hidden="true">
+                <i class="bi bi-capsule-pill" aria-hidden="true"></i>
+              </div>
+              <div class="order-track-product-info">
+                <strong>Vitamin C 1000mg Effervescent Tablets</strong>
+                <span>Pack of 20 · Quantity: 1</span>
+              </div>
+              <strong class="order-track-product-price">৳ 450.00</strong>
+            </div>
+          </article>
+        </section>
+
+        <aside class="order-track-sidebar" aria-label="Order details">
+          <article class="order-track-card order-track-details">
+            <div class="order-track-card-heading">
+              <h2>Order details</h2>
+              <span class="order-track-paid">COD</span>
+            </div>
+            <dl>
+              <div><dt>Order number</dt><dd>CK-2026-04821</dd></div>
+              <div><dt>Placed on</dt><dd>Oct 14, 2026</dd></div>
+              <div><dt>Payment method</dt><dd>Cash on delivery</dd></div>
+              <div class="order-track-total"><dt>Order total</dt><dd>৳ 510.00</dd></div>
+            </dl>
+          </article>
+
+          <article class="order-track-card order-track-address">
+            <div class="order-track-card-heading">
+              <h2>Delivery address</h2>
+              <i class="bi bi-geo-alt" aria-hidden="true"></i>
+            </div>
+            <strong>Rahim Uddin</strong>
+            <p>House 12, Road 4, Dhanmondi<br />Dhaka 1205, Bangladesh</p>
+            <a href="tel:+8801712345678">
+              <i class="bi bi-telephone" aria-hidden="true"></i>
+              +880 1712-345678
+            </a>
+          </article>
+
+          <article class="order-track-support">
+            <span class="order-track-support-icon" aria-hidden="true"><i class="bi bi-chat-dots"></i></span>
+            <div>
+              <strong>Questions about your delivery?</strong>
+              <p>Our care team is here to help, any time.</p>
+              <a href="mailto:support@example.com">Contact support <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+        </aside>
+      </div>
+    </main>
+
+    <section class="trust">
+      <div class="container-xxl">
+        <div class="row g-2">
+          <div class="col-6 col-lg-3"><div class="tc"><i class="bi bi-shield-check" aria-hidden="true"></i><span><b>Authentic products</b>Sourced from trusted suppliers.</span></div></div>
+          <div class="col-6 col-lg-3"><div class="tc"><i class="bi bi-heart-pulse" aria-hidden="true"></i><span><b>Pharmacist-verified</b>Prescription orders are checked.</span></div></div>
+          <div class="col-6 col-lg-3"><div class="tc"><i class="bi bi-truck" aria-hidden="true"></i><span><b>Fast home delivery</b>Updates at every delivery step.</span></div></div>
+          <div class="col-6 col-lg-3"><div class="tc"><i class="bi bi-headset" aria-hidden="true"></i><span><b>24/7 customer support</b>Here whenever you need us.</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container-xxl">
+        <div class="row g-4">
+          <div class="col-lg-5">
+            <a class="logo mb-2" href="index.html"><b><i class="bi bi-plus-lg" aria-hidden="true"></i></b>CareKart</a>
+            <p>Online pharmacy and healthcare products, delivered to your door.</p>
+          </div>
+          <div class="col-6 col-lg-3">
+            <h6>HELP</h6>
+            <a href="mailto:support@example.com">Contact support</a>
+            <a href="#">Delivery information</a>
+            <a href="#">Returns &amp; refunds</a>
+          </div>
+          <div class="col-6 col-lg-4">
+            <h6>CONTACT</h6>
+            <a href="tel:+8801000000000">+880 1000-000000 · 24/7</a>
+            <a href="mailto:support@example.com">support@example.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="copy">© 2026 CareKart Healthcare Limited. All rights reserved.</div>
+    </footer>
+
+    <nav class="mnav d-lg-none" aria-label="Mobile">
+      <a href="index.html"><span class="i"><i class="bi bi-house" aria-hidden="true"></i></span>Home</a>
+      <a href="sellers.html"><span class="i"><i class="bi bi-shop" aria-hidden="true"></i></span>Sellers</a>
+      <a href="index.html" class="home" aria-label="Home"><i class="bi bi-plus-lg" aria-hidden="true"></i></a>
+      <a href="#"><span class="i"><i class="bi bi-box-seam" aria-hidden="true"></i></span>Orders</a>
+      <a href="#"><span class="i"><i class="bi bi-person" aria-hidden="true"></i></span>Account</a>
+    </nav>
+  </body>
+</html>

@@ -42,8 +42,7 @@ function CheckoutPage() {
     setLoading(true);
 
     try {
-      // const res = await fetch(`${API_URL}orders`, {
-      const res = await fetch(`http://multivendor-ecommerce.test/api/frontend/orders`, {
+      const res = await fetch(`${API_URL}orders`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
