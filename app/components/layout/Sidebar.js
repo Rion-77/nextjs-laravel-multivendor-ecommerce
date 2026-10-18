@@ -2,9 +2,11 @@ import Link from "next/link";
 import Icon from "../Icon";
 import { API_URL } from "@/lib/config";
 import Image from "next/image";
+import { cacheLife } from "next/cache";
 
 async function getAllCategories() {
   "use cache";
+  cacheLife("categories");
   const res = await fetch(API_URL + "categories");
 
   return res.json();

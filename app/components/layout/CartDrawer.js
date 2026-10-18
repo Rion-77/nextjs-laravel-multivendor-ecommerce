@@ -104,65 +104,66 @@ function CartDrawer() {
             <button className="btn-close ms-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div className="offcanvas-body d-flex flex-column p-3">
-            {cartProducts.map((product) => (
-              <div className="flex-grow-1" key={product.id}>
-                <div className="ci">
-                  <div className="th overflow-hidden">
-                    <img className="cart-product-image" src={product.image} />
-                  </div>
-                  <div className="flex-grow-1">
-                    <div className="fw-semibold small">{product.name}</div>
-                    <form action="/cart/update" method="post" className="d-flex gap-2 mt-2 flex-wrap">
-                      <input type="hidden" name="product_id" value="26" />
+            <div className="flex-grow-1">
+              {cartProducts.map((product) => (
+                <div key={product.id}>
+                  <div className="ci">
+                    <div className="th overflow-hidden">
+                      <img className="cart-product-image" src={product.image} />
+                    </div>
+                    <div className="flex-grow-1">
+                      <div className="fw-semibold small">{product.name}</div>
+                      <form action="/cart/update" method="post" className="d-flex gap-2 mt-2 flex-wrap">
+                        <input type="hidden" name="product_id" value="26" />
 
-                      <div className="cart-quantity">
+                        <div className="cart-quantity">
+                          <button
+                            onClick={() => decreaseQuantity(product.id)}
+                            className="cart-quantity-btn"
+                            type="button"
+                            aria-label="Decrease quantity"
+                          >
+                            −
+                          </button>
+                          <input
+                            className="qty-in"
+                            type="number"
+                            name="qty"
+                            min="1"
+                            readOnly
+                            value={product.quantity}
+                            aria-label="Quantity"
+                          />
+                          <button
+                            onClick={() => increaseQuantity(product.id)}
+                            className="cart-quantity-btn"
+                            type="button"
+                            aria-label="Increase quantity"
+                          >
+                            +
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                    <div className="text-end">
+                      <form action="/cart/remove" method="post">
+                        <input type="hidden" name="product_id" value="26" />
                         <button
-                          onClick={() => decreaseQuantity(product.id)}
-                          className="cart-quantity-btn"
+                          onClick={() => deleteProduct(product.id)}
+                          className="ico"
                           type="button"
-                          aria-label="Decrease quantity"
+                          aria-label="Remove"
                         >
-                          −
+                          <Icon name="trash" size={18} />
                         </button>
-                        <input
-                          className="qty-in"
-                          type="number"
-                          name="qty"
-                          min="1"
-                          readOnly
-                          value={product.quantity}
-                          aria-label="Quantity"
-                        />
-                        {/* onClick={addToCart} */}
-                        <button
-                          onClick={() => increaseQuantity(product.id)}
-                          className="cart-quantity-btn"
-                          type="button"
-                          aria-label="Increase quantity"
-                        >
-                          +
-                        </button>
-                      </div>
-                    </form>
-                  </div>
-                  <div className="text-end">
-                    <form action="/cart/remove" method="post">
-                      <input type="hidden" name="product_id" value="26" />
-                      <button
-                        onClick={() => deleteProduct(product.id)}
-                        className="ico"
-                        type="button"
-                        aria-label="Remove"
-                      >
-                        <Icon name="trash" size={18} />
-                      </button>
-                    </form>
-                    <div className="fw-semibold">৳ {(product.offer_price * product.quantity).toFixed(2)}</div>
-                    <s className="small text-secondary">৳ {(product.base_price * product.quantity).toFixed(2)}</s>
+                      </form>
+                      <div className="fw-semibold">৳ {(product.offer_price * product.quantity).toFixed(2)}</div>
+                      <s className="small text-secondary">৳ {(product.base_price * product.quantity).toFixed(2)}</s>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
 
             <div>
               <div className="save mb-3">You are saving ৳ {cartDiscount.toFixed(2)} in this order</div>

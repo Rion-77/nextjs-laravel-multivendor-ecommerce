@@ -4,7 +4,7 @@
 6:I[39756,["$4","$5"],"default"]
 7:I[37457,["$4","$5"],"default"]
 c:I[47257,["$4","$5"],"ClientPageRoot"]
-d:"/_next/static/chunks/1jdq_5h6c_91t.js"
+d:"/_next/static/chunks/3oskhzmgpkc3c.js"
 e:"/_next/static/chunks/2mft0vb0ajell.js"
 f:I[19234,["$4","$5","$d","$e"],"default"]
 10:I[97367,["$4","$5"],"OutletBoundary"]
@@ -17,7 +17,7 @@ f:I[19234,["$4","$5","$d","$e"],"default"]
 9:X
 9:C
 a:X
-a:300
+a:30
 a:300
 a:C
 b:[["children",{"s":"__PAGE__","h":49314,"d":{"r":["$","$3","c",{"children":[["$","$Lc",null,{"Component":"$f","serverProvidedParams":null}],[["$","script","script-0",{"src":"/_next/static/chunks/2mft0vb0ajell.js","async":true}]],["$","$L10",null,{"children":["$","$11",null,{"name":"Next.MetadataOutlet","children":"$@12"}]}]]}],"p":"$@13","v":"$9","s":"$a"}}]]
@@ -27,7 +27,7 @@ b:[["children",{"s":"__PAGE__","h":49314,"d":{"r":["$","$3","c",{"children":[["$
 1a:C
 1d:X
 1d:C
-0:{"t":{"t":{"s":"","h":49238,"c":"$Q1"},"h":{"r":["$","$3","h",{"children":[null,["$","$L15",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L17",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$11",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"CareKart"}],["$","meta","1",{"name":"description","content":"Online Pharmacy Template"}],["$","link","2",{"rel":"icon","href":"/favicon.ico?favicon.117ezoe8m31dk.ico","sizes":"48x48","type":"image/x-icon"}],["$","$L18","3",{}]]}]}],null]}],null]}],"p":"$@19","v":"$1a","s":"$a"}},"a":"$@1b","u":"$@1c","b":"br2mZs7yZ9kRJeIcKdr8P","r":"$1d"}
+0:{"t":{"t":{"s":"","h":49238,"c":"$Q1"},"h":{"r":["$","$3","h",{"children":[null,["$","$L15",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L17",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$11",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"CareKart"}],["$","meta","1",{"name":"description","content":"Online Pharmacy Template"}],["$","link","2",{"rel":"icon","href":"/favicon.ico?favicon.117ezoe8m31dk.ico","sizes":"48x48","type":"image/x-icon"}],["$","$L18","3",{}]]}]}],null]}],null]}],"p":"$@19","v":"$1a","s":"$a"}},"a":"$@1b","u":"$@1c","b":"rgexuoFKOpsrRnnZzNBkQ","r":"$1d"}
 12:null
 1c:false
 1b:null

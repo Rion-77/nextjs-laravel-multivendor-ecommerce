@@ -6,7 +6,7 @@
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 152810,
+      "htmlSize": 154325,
       "experimentalPPR": true,
       "experimentalBypassFor": [
         {
@@ -24,8 +24,8 @@
           "value": ".*(?:[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight).*"
         }
       ],
-      "initialRevalidateSeconds": 900,
-      "initialExpireSeconds": 31536000,
+      "initialRevalidateSeconds": 60,
+      "initialExpireSeconds": 3600,
       "srcRoute": "/",
       "dataRoute": "/index.rsc",
       "prefetchDataRoute": "/index.rsc",
@@ -43,7 +43,7 @@
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 9536,
+      "htmlSize": 9535,
       "experimentalPPR": true,
       "experimentalBypassFor": [
         {
@@ -80,7 +80,7 @@
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 9940,
+      "htmlSize": 9939,
       "experimentalPPR": true,
       "experimentalBypassFor": [
         {
@@ -116,7 +116,7 @@
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 23012,
+      "htmlSize": 23011,
       "experimentalPPR": true,
       "experimentalBypassFor": [
         {
@@ -185,7 +185,7 @@
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 69329,
+      "htmlSize": 72403,
       "experimentalPPR": true,
       "experimentalBypassFor": [
         {
@@ -204,7 +204,7 @@
         }
       ],
       "initialRevalidateSeconds": 900,
-      "initialExpireSeconds": 31536000,
+      "initialExpireSeconds": 86400,
       "srcRoute": "/order-tracking",
       "dataRoute": "/order-tracking.rsc",
       "prefetchDataRoute": "/order-tracking.rsc",
@@ -222,7 +222,7 @@
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 107966,
+      "htmlSize": 111134,
       "experimentalPPR": true,
       "experimentalBypassFor": [
         {
@@ -240,8 +240,8 @@
           "value": ".*(?:[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight).*"
         }
       ],
-      "initialRevalidateSeconds": 900,
-      "initialExpireSeconds": 31536000,
+      "initialRevalidateSeconds": 300,
+      "initialExpireSeconds": 3600,
       "srcRoute": "/sellers",
       "dataRoute": "/sellers.rsc",
       "prefetchDataRoute": "/sellers.rsc",
@@ -263,7 +263,7 @@
       "routeType": "shell",
       "response": "initial",
       "compute": "resuming",
-      "htmlSize": 23968,
+      "htmlSize": 25648,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -284,7 +284,7 @@
       "dataRoute": "/products/[id].rsc",
       "fallback": "/products/[id]",
       "fallbackRevalidate": 900,
-      "fallbackExpire": 31536000,
+      "fallbackExpire": 86400,
       "fallbackRootParams": [],
       "fallbackSourceRoute": "/products/[id]",
       "fallbackRouteParams": [
@@ -311,7 +311,7 @@
       "routeType": "shell",
       "response": "initial",
       "compute": "resuming",
-      "htmlSize": 23968,
+      "htmlSize": 25648,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -332,7 +332,7 @@
       "dataRoute": "/sellers/[id].rsc",
       "fallback": "/sellers/[id]",
       "fallbackRevalidate": 900,
-      "fallbackExpire": 31536000,
+      "fallbackExpire": 86400,
       "fallbackRootParams": [],
       "fallbackSourceRoute": "/sellers/[id]",
       "fallbackRouteParams": [
@@ -359,7 +359,7 @@
       "routeType": "shell",
       "response": "initial",
       "compute": "resuming",
-      "htmlSize": 23951,
+      "htmlSize": 25631,
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -380,7 +380,7 @@
       "dataRoute": "/[categorySlug].rsc",
       "fallback": "/[categorySlug]",
       "fallbackRevalidate": 900,
-      "fallbackExpire": 31536000,
+      "fallbackExpire": 86400,
       "fallbackRootParams": [],
       "fallbackSourceRoute": "/[categorySlug]",
       "fallbackRouteParams": [
@@ -403,8 +403,8 @@
   },
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "c2c7667a001e2e221b88222197d9366a",
-    "previewModeSigningKey": "02cd55c303e821927de86b027cb6bf25f2c01b1286cd9934d4503bd1786df588",
-    "previewModeEncryptionKey": "090f2b8a861275cd92d9215cdca0f6e83b305a75a211e16e05f7d09e864f7dea"
+    "previewModeId": "696641af3ef87a94babed1d20e9c55c6",
+    "previewModeSigningKey": "f9608f88d79aa2bb5e727203c131ef8d97d1d4d7be9c7600e1bd56d20253d497",
+    "previewModeEncryptionKey": "796b3239aa6debcf4373c2e07666c7d241146aa6e52be3301357ef9c1e7bc1d7"
   }
 }

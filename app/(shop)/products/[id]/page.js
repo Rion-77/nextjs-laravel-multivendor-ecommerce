@@ -4,11 +4,12 @@ import { API_URL, WEBSITE_NAME } from "@/lib/config";
 import AddToCartButton from "@/app/components/buttons/AddToCart";
 import ProductQuantitySelector from "@/app/components/ProductPriceCard";
 import ProductPriceCard from "@/app/components/ProductPriceCard";
+import { cacheLife } from "next/cache";
 
 // Api request for data
 async function getSingleProduct(id) {
   "use cache";
-
+  cacheLife("product");
   const res = await fetch(
     `${API_URL}products/${id}`,
   );

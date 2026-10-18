@@ -2,7 +2,7 @@
   "status": 200,
   "headers": {
     "link": "</>; rel=preconnect; crossorigin=\"\"",
-    "x-nextjs-stale-time": "300",
+    "x-nextjs-stale-time": "40",
     "x-nextjs-prerender": "1",
     "x-next-cache-tags": "_N_T_/layout,_N_T_/(shop)/layout,_N_T_/(shop)/page,_N_T_/,_N_T_/index"
   },

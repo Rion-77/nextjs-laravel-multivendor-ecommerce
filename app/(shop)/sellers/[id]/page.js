@@ -3,11 +3,12 @@ import Icon from "../../../components/Icon";
 import Link from "next/link";
 import Image from "next/image";
 import ProductCard from "@/app/components/ProductCard";
+import { cacheLife } from "next/cache";
 
 // Api request for data
 async function getSingleVendor(id) {
   "use cache";
-
+  cacheLife("seller")
   const res = await fetch(`${API_URL}vendors/${id}`);
 
   return res.json();

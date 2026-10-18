@@ -6,9 +6,11 @@ import Icon from "../components/Icon";
 import Carousel from "../components/layout/Carousel";
 import ProductCard from "../components/ProductCard";
 import { API_URL } from "@/lib/config";
+import { cacheLife } from "next/cache";
 
 async function getHomeContent() {
   "use cache";
+  cacheLife("home");
   const res = await fetch(API_URL + "home");
 
   return res.json();
@@ -45,34 +47,33 @@ export default async function Home() {
           </div>
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <div className="slide-wrapper h1">
-                <h1>Genuine medicines, delivered home</h1>
-                <p>
-                  Pharmacist-checked orders with same-day delivery in major
-                  cities.
-                </p>
-                <button className="wbtn">Shop now</button>
-                <div className="art">
-                  <Icon name="capsule" size={180} />
-                </div>
-              </div>
+              <Link href="#" className="d-block">
+                <Image
+                  src="/image/promo-banner-1.avif"
+                  width={1976}
+                  height={688}
+                  alt="Featured promotion"
+                  className="d-block w-100 h-auto"
+                />
+              </Link>
             </div>
             <div className="carousel-item">
-              <div className="slide-wrapper h2">
-                <h1>Give yourself a little extra care</h1>
-                <p>Up to 50% off skin care this week.</p>
-                <button className="wbtn">See deals</button>
-                <div className="art">
-                  <Icon name="bottle" size={180} />
-                </div>
-              </div>
+              <Link href="#" className="d-block">
+                <Image
+                  src="/image/promo-banner-2.avif"
+                  width={1976}
+                  height={688}
+                  alt="Featured promotion"
+                  className="d-block w-100 h-auto"
+                />
+              </Link>
             </div>
           </div>
         </div>
 
         <div className="sec">
           <h2>Product Categories</h2>
-          <a href="index.html">See All</a>
+          {/* <a href="index.html">See All</a> */}
         </div>
         {/* Categories */}
         <div className="wrap-x">
@@ -101,7 +102,7 @@ export default async function Home() {
           <div key={category.id}>
             <div className="sec">
               <h2>{category.name}</h2>
-              <a href="index.html">See All</a>
+              {/* <Link href={`/${category.slug}`}>See All</Link> */}
             </div>
             {/* Products */}
             <Carousel>

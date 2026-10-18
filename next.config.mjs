@@ -20,6 +20,18 @@ const nextConfig = {
   partialPrefetching: true,
   output: 'standalone',
 
+  cacheLife: {
+    categories: { stale: 300, revalidate: 900, expire: 86400 },
+    home:       { stale: 40,  revalidate: 60, expire: 3600 },
+    listing:    { stale: 60,  revalidate: 120, expire: 3600 },
+    product:    { stale: 30,  revalidate: 60,  expire: 600 },
+    seller:     { stale: 60,  revalidate: 300, expire: 3600 },
+  },
+
+  experimental: {
+    staleTimes: { dynamic: 0, static: 30 },
+  },
+
   images: {
     dangerouslyAllowSVG: true,
     remotePatterns: [

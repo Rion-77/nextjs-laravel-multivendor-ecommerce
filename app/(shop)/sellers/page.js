@@ -2,11 +2,12 @@ import Link from "next/link";
 import Icon from "../../components/Icon";
 import { API_URL, WEBSITE_NAME } from "@/lib/config";
 import Image from "next/image";
+import { cacheLife } from "next/cache";
 
 // Api request for data
 async function getSellers() {
   "use cache";
-
+  cacheLife("seller");
   const res = await fetch(`${API_URL}vendors`);
 
   return res.json();

@@ -1,6 +1,6 @@
 {
   "node": {
-    "8008896809208543cd16a7b2c6ab9c4521a0ae1510": {
+    "80f0255b1744e24fe38af9c68f41be6069f7e24908": {
       "workers": {
         "app/(shop)/sellers/[id]/page": {
           "moduleId": 17357,
@@ -10,7 +10,7 @@
       "exportedName": "$$RSC_SERVER_CACHE_0",
       "filename": "app/components/layout/Sidebar.js"
     },
-    "c0c496e4a10c5a62c35d062419005e60cccf090fa1": {
+    "c01c6ee8b82e44278b8a769440c34bc6e3920064c9": {
       "workers": {
         "app/(shop)/sellers/[id]/page": {
           "moduleId": 17357,

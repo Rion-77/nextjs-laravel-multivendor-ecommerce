@@ -2,10 +2,11 @@ import Link from "next/link";
 import Icon from "../../components/Icon";
 import ProductCard from "../../components/ProductCard";
 import { API_URL } from "@/lib/config";
+import { cacheLife } from "next/cache";
 
 async function getCategoryProduct(slug) {
   "use cache";
-
+  cacheLife("listing");
   const res = await fetch(
     `${API_URL}categories/${slug}`,
   );

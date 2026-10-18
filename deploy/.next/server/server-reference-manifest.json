@@ -1,6 +1,6 @@
 {
   "node": {
-    "8008896809208543cd16a7b2c6ab9c4521a0ae1510": {
+    "80f0255b1744e24fe38af9c68f41be6069f7e24908": {
       "workers": {
         "app/(shop)/[categorySlug]/page": {
           "moduleId": 50963,
@@ -30,7 +30,7 @@
       "filename": "app/components/layout/Sidebar.js",
       "exportedName": "$$RSC_SERVER_CACHE_0"
     },
-    "803feb33989a0a9776c32b155f8beb68ece689a440": {
+    "80aa3bf22d1aa600caf3acfed5a162f8d586f266f8": {
       "workers": {
         "app/(shop)/page": {
           "moduleId": 36070,
@@ -40,7 +40,7 @@
       "filename": "app/(shop)/page.js",
       "exportedName": "$$RSC_SERVER_CACHE_0"
     },
-    "c05af2eb01d585fc1856590b4f1de0ef267e661e08": {
+    "c0f2bd4986b4eee90dfba6081237465dd4cefc5c14": {
       "workers": {
         "app/(shop)/[categorySlug]/page": {
           "moduleId": 50963,
@@ -50,7 +50,7 @@
       "filename": "app/(shop)/[categorySlug]/page.js",
       "exportedName": "$$RSC_SERVER_CACHE_0"
     },
-    "c0d91dfe2c4855c0a37c29e2a94d760a54bce0af1c": {
+    "c0b2dc89714b88ee4043502872571a2eed01c63af4": {
       "workers": {
         "app/(shop)/products/[id]/page": {
           "moduleId": 96820,
@@ -60,7 +60,7 @@
       "filename": "app/(shop)/products/[id]/page.js",
       "exportedName": "$$RSC_SERVER_CACHE_0"
     },
-    "805e36af6e41ce6922d117919e91b21a9cf368cde9": {
+    "80318a236eed04d73e67de617a65b85cd4218ec233": {
       "workers": {
         "app/(shop)/sellers/page": {
           "moduleId": 94197,
@@ -70,7 +70,7 @@
       "filename": "app/(shop)/sellers/page.js",
       "exportedName": "$$RSC_SERVER_CACHE_0"
     },
-    "c0c496e4a10c5a62c35d062419005e60cccf090fa1": {
+    "c01c6ee8b82e44278b8a769440c34bc6e3920064c9": {
       "workers": {
         "app/(shop)/sellers/[id]/page": {
           "moduleId": 17357,
@@ -82,5 +82,5 @@
     }
   },
   "edge": {},
-  "encryptionKey": "MVNqMsa7+JLzrSX+FJV4d4mVgUim+aZlLCd/M/22i0g="
+  "encryptionKey": "PjwMn2bSHgsPKgf7NFIKUUovcz/m15aPMlLgNTUHnto="
 }
